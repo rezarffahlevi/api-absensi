@@ -1,0 +1,195 @@
+CRITICAL - 2021-01-12 15:11:21 --> file_put_contents(C:\xampp\htdocs\api-absensi\app\public/images/newImage.png): failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_put_conten...', 'C:\\xampp\\htdocs...', 72, Array)
+#1 C:\xampp\htdocs\api-absensi\app\Controllers\Absent.php(72): file_put_contents('C:\\xampp\\htdocs...', 'u\xABZ\x8Af\xA0{\xFAg\x81\xB6\xAC{\xAE?...')
+#2 C:\xampp\htdocs\api-absensi\app\Controllers\Absent.php(50): App\Controllers\Absent->_convertToImg('data:image/png;...')
+#3 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Absent->save()
+#4 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absent))
+#5 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-01-12 15:11:21 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse json string, error: "Malformed UTF-8 characters, possibly incorrectly encoded". in C:\xampp\htdocs\api-absensi\system\Format\Exceptions\FormatException.php:9
+Stack trace:
+#0 C:\xampp\htdocs\api-absensi\system\Format\JSONFormatter.php(71): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Malformed UTF-8...')
+#1 C:\xampp\htdocs\api-absensi\system\API\ResponseTrait.php(414): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\api-absensi\system\API\ResponseTrait.php(134): CodeIgniter\Debug\Exceptions->format(Array)
+#3 C:\xampp\htdocs\api-absensi\system\Debug\Exceptions.php(168): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#5 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-12 15:13:10 --> file_put_contents(C:\xampp\htdocs\api-absensi\app\public/images/newImage.png): failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_put_conten...', 'C:\\xampp\\htdocs...', 72, Array)
+#1 C:\xampp\htdocs\api-absensi\app\Controllers\Absent.php(72): file_put_contents('C:\\xampp\\htdocs...', 'u\xABZ\x8Af\xA0{\xFAg\x81\xB6\xAC{\xAE?...')
+#2 C:\xampp\htdocs\api-absensi\app\Controllers\Absent.php(50): App\Controllers\Absent->_convertToImg('data:image/png;...')
+#3 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Absent->save()
+#4 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absent))
+#5 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-01-12 15:13:10 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse json string, error: "Malformed UTF-8 characters, possibly incorrectly encoded". in C:\xampp\htdocs\api-absensi\system\Format\Exceptions\FormatException.php:9
+Stack trace:
+#0 C:\xampp\htdocs\api-absensi\system\Format\JSONFormatter.php(71): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Malformed UTF-8...')
+#1 C:\xampp\htdocs\api-absensi\system\API\ResponseTrait.php(414): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\api-absensi\system\API\ResponseTrait.php(134): CodeIgniter\Debug\Exceptions->format(Array)
+#3 C:\xampp\htdocs\api-absensi\system\Debug\Exceptions.php(168): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#5 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-12 15:14:30 --> file_put_contents(C:\xampp\htdocs\api-absensi\app\public/images/newImage.png): failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_put_conten...', 'C:\\xampp\\htdocs...', 72, Array)
+#1 C:\xampp\htdocs\api-absensi\app\Controllers\Absent.php(72): file_put_contents('C:\\xampp\\htdocs...', 'u\xABZ\x8Af\xA0{\xFAg\x81\xB6\xAC{\xAE?...')
+#2 C:\xampp\htdocs\api-absensi\app\Controllers\Absent.php(50): App\Controllers\Absent->_convertToImg('data:image/png;...')
+#3 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Absent->save()
+#4 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absent))
+#5 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-01-12 15:14:30 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse json string, error: "Malformed UTF-8 characters, possibly incorrectly encoded". in C:\xampp\htdocs\api-absensi\system\Format\Exceptions\FormatException.php:9
+Stack trace:
+#0 C:\xampp\htdocs\api-absensi\system\Format\JSONFormatter.php(71): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Malformed UTF-8...')
+#1 C:\xampp\htdocs\api-absensi\system\API\ResponseTrait.php(414): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\api-absensi\system\API\ResponseTrait.php(134): CodeIgniter\Debug\Exceptions->format(Array)
+#3 C:\xampp\htdocs\api-absensi\system\Debug\Exceptions.php(168): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#5 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-12 15:16:07 --> file_put_contents(http://localhost:8080/public/images/newImage.png): failed to open stream: HTTP wrapper does not support writeable connections
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_put_conten...', 'C:\\xampp\\htdocs...', 71, Array)
+#1 C:\xampp\htdocs\api-absensi\app\Controllers\Absent.php(71): file_put_contents('http://localhos...', 'u\xABZ\x8Af\xA0{\xFAg\x81\xB6\xAC{\xAE?...')
+#2 C:\xampp\htdocs\api-absensi\app\Controllers\Absent.php(50): App\Controllers\Absent->_convertToImg('data:image/png;...')
+#3 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Absent->save()
+#4 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absent))
+#5 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-01-12 15:16:07 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse json string, error: "Malformed UTF-8 characters, possibly incorrectly encoded". in C:\xampp\htdocs\api-absensi\system\Format\Exceptions\FormatException.php:9
+Stack trace:
+#0 C:\xampp\htdocs\api-absensi\system\Format\JSONFormatter.php(71): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Malformed UTF-8...')
+#1 C:\xampp\htdocs\api-absensi\system\API\ResponseTrait.php(414): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\api-absensi\system\API\ResponseTrait.php(134): CodeIgniter\Debug\Exceptions->format(Array)
+#3 C:\xampp\htdocs\api-absensi\system\Debug\Exceptions.php(168): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#5 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-12 15:16:18 --> file_put_contents(public/images/newImage.png): failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_put_conten...', 'C:\\xampp\\htdocs...', 71, Array)
+#1 C:\xampp\htdocs\api-absensi\app\Controllers\Absent.php(71): file_put_contents('public/images/n...', 'u\xABZ\x8Af\xA0{\xFAg\x81\xB6\xAC{\xAE?...')
+#2 C:\xampp\htdocs\api-absensi\app\Controllers\Absent.php(50): App\Controllers\Absent->_convertToImg('data:image/png;...')
+#3 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Absent->save()
+#4 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absent))
+#5 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-01-12 15:16:18 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse json string, error: "Malformed UTF-8 characters, possibly incorrectly encoded". in C:\xampp\htdocs\api-absensi\system\Format\Exceptions\FormatException.php:9
+Stack trace:
+#0 C:\xampp\htdocs\api-absensi\system\Format\JSONFormatter.php(71): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Malformed UTF-8...')
+#1 C:\xampp\htdocs\api-absensi\system\API\ResponseTrait.php(414): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\api-absensi\system\API\ResponseTrait.php(134): CodeIgniter\Debug\Exceptions->format(Array)
+#3 C:\xampp\htdocs\api-absensi\system\Debug\Exceptions.php(168): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#5 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-12 15:20:02 --> file_put_contents(images/1231_2021-01-12 15:20:02): failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_put_conten...', 'C:\\xampp\\htdocs...', 51, Array)
+#1 C:\xampp\htdocs\api-absensi\app\Controllers\Absent.php(51): file_put_contents('images/1231_202...', '\xFF\xD8\xFF\xE19\xD7Exif\x00\x00II*...')
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Absent->save()
+#3 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absent))
+#4 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-01-12 15:20:02 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse json string, error: "Malformed UTF-8 characters, possibly incorrectly encoded". in C:\xampp\htdocs\api-absensi\system\Format\Exceptions\FormatException.php:9
+Stack trace:
+#0 C:\xampp\htdocs\api-absensi\system\Format\JSONFormatter.php(71): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Malformed UTF-8...')
+#1 C:\xampp\htdocs\api-absensi\system\API\ResponseTrait.php(414): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\api-absensi\system\API\ResponseTrait.php(134): CodeIgniter\Debug\Exceptions->format(Array)
+#3 C:\xampp\htdocs\api-absensi\system\Debug\Exceptions.php(168): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#5 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-12 15:20:27 --> file_put_contents(images/1231_2021-01-12 15:20:27.png): failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_put_conten...', 'C:\\xampp\\htdocs...', 51, Array)
+#1 C:\xampp\htdocs\api-absensi\app\Controllers\Absent.php(51): file_put_contents('images/1231_202...', '\xFF\xD8\xFF\xE19\xD7Exif\x00\x00II*...')
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Absent->save()
+#3 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absent))
+#4 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-01-12 15:20:27 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse json string, error: "Malformed UTF-8 characters, possibly incorrectly encoded". in C:\xampp\htdocs\api-absensi\system\Format\Exceptions\FormatException.php:9
+Stack trace:
+#0 C:\xampp\htdocs\api-absensi\system\Format\JSONFormatter.php(71): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Malformed UTF-8...')
+#1 C:\xampp\htdocs\api-absensi\system\API\ResponseTrait.php(414): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\api-absensi\system\API\ResponseTrait.php(134): CodeIgniter\Debug\Exceptions->format(Array)
+#3 C:\xampp\htdocs\api-absensi\system\Debug\Exceptions.php(168): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#5 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-12 15:20:30 --> file_put_contents(images/1231_2021-01-12 15:20:30.png): failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_put_conten...', 'C:\\xampp\\htdocs...', 51, Array)
+#1 C:\xampp\htdocs\api-absensi\app\Controllers\Absent.php(51): file_put_contents('images/1231_202...', '\xFF\xD8\xFF\xE19\xD7Exif\x00\x00II*...')
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Absent->save()
+#3 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absent))
+#4 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-01-12 15:20:30 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse json string, error: "Malformed UTF-8 characters, possibly incorrectly encoded". in C:\xampp\htdocs\api-absensi\system\Format\Exceptions\FormatException.php:9
+Stack trace:
+#0 C:\xampp\htdocs\api-absensi\system\Format\JSONFormatter.php(71): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Malformed UTF-8...')
+#1 C:\xampp\htdocs\api-absensi\system\API\ResponseTrait.php(414): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\api-absensi\system\API\ResponseTrait.php(134): CodeIgniter\Debug\Exceptions->format(Array)
+#3 C:\xampp\htdocs\api-absensi\system\Debug\Exceptions.php(168): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#5 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-12 15:21:50 --> file_put_contents(images/1231_2021-01-12 15:21:50.png): failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_put_conten...', 'C:\\xampp\\htdocs...', 36, Array)
+#1 C:\xampp\htdocs\api-absensi\app\Controllers\Absent.php(36): file_put_contents('images/1231_202...', '\xFF\xD8\xFF\xE19\xD7Exif\x00\x00II*...')
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Absent->save()
+#3 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absent))
+#4 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-01-12 15:21:50 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse json string, error: "Malformed UTF-8 characters, possibly incorrectly encoded". in C:\xampp\htdocs\api-absensi\system\Format\Exceptions\FormatException.php:9
+Stack trace:
+#0 C:\xampp\htdocs\api-absensi\system\Format\JSONFormatter.php(71): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Malformed UTF-8...')
+#1 C:\xampp\htdocs\api-absensi\system\API\ResponseTrait.php(414): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\api-absensi\system\API\ResponseTrait.php(134): CodeIgniter\Debug\Exceptions->format(Array)
+#3 C:\xampp\htdocs\api-absensi\system\Debug\Exceptions.php(168): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#5 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-12 15:23:46 --> file_put_contents(images/1231_2021-01-12 15:23:46.png): failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_put_conten...', 'C:\\xampp\\htdocs...', 36, Array)
+#1 C:\xampp\htdocs\api-absensi\app\Controllers\Absent.php(36): file_put_contents('images/1231_202...', '\xFF\xD8\xFF\xE19\xD7Exif\x00\x00II*...')
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Absent->save()
+#3 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absent))
+#4 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-01-12 15:23:46 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse json string, error: "Malformed UTF-8 characters, possibly incorrectly encoded". in C:\xampp\htdocs\api-absensi\system\Format\Exceptions\FormatException.php:9
+Stack trace:
+#0 C:\xampp\htdocs\api-absensi\system\Format\JSONFormatter.php(71): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Malformed UTF-8...')
+#1 C:\xampp\htdocs\api-absensi\system\API\ResponseTrait.php(414): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\xampp\htdocs\api-absensi\system\API\ResponseTrait.php(134): CodeIgniter\Debug\Exceptions->format(Array)
+#3 C:\xampp\htdocs\api-absensi\system\Debug\Exceptions.php(168): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#5 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}

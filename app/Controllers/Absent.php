@@ -30,10 +30,15 @@ class Absent extends BaseController
         $tgl = date("Y-m-d H:i:s");
 
         if ($this->isValidToken()) {
+            
+            $decoded = base64_decode($photo);
+            $newName = $nis . '_' . strtotime($tgl) . '.png';
+            file_put_contents('images/' . $newName, $decoded);
+
             $data = [
                 'tgl' => $tgl,
                 'nis' => $nis,
-                'photo' => $photo,
+                'photo' => $newName,
                 'latitude' => $latitude,
                 'longitude' => $longitude,
             ];
@@ -43,7 +48,7 @@ class Absent extends BaseController
                 $message = 'Failed get your location';
             } else {
                 $save = $this->m_absent->insert($data);
-                $message = 'success absent at ' . $tgl;
+                $message = 'Success absent at ' . $tgl;
                 $data['save'] = $save;
             }
 
