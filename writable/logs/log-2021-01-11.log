@@ -1,0 +1,811 @@
+CRITICAL - 2021-01-11 00:51:06 --> Call to undefined method App\Controllers\Home::respond()
+#0 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Home->index()
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-01-11 00:51:20 --> Call to undefined function App\Controllers\response()
+#0 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Home->index()
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-01-11 00:52:30 --> Call to undefined method App\Controllers\Home::respond()
+#0 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Home->index()
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-01-11 00:53:13 --> Call to undefined method App\Controllers\Home::respond()
+#0 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Home->index()
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-01-11 01:08:54 --> Class 'Firebase\JWT\JWT' not found
+#0 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Home->index()
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-01-11 01:11:56 --> Class 'Firebase\JWT\JWT' not found
+#0 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Home->index()
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-01-11 01:11:58 --> Class 'Firebase\JWT\JWT' not found
+#0 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Home->index()
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-01-11 01:13:48 --> Class 'Firebase\JWT' not found
+#0 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Home->index()
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-01-11 01:14:04 --> Class 'Firebase\JWT\JWT' not found
+#0 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Home->index()
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-01-11 01:15:47 --> Class 'Firebase\JWT\JWT' not found
+#0 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Home->index()
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-01-11 01:15:48 --> Class 'Firebase\JWT\JWT' not found
+#0 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Home->index()
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-01-11 01:15:59 --> Class 'Firebase\JWT' not found
+#0 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Home->index()
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-01-11 01:16:04 --> Class 'Firebase\JWT\JWT' not found
+#0 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Home->index()
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-01-11 01:16:12 --> Class 'Firebase\JWT\JWT' not found
+#0 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Home->index()
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-01-11 01:16:49 --> Class 'Firebase\JWT\JWT' not found
+#0 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Home->index()
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-01-11 01:17:10 --> Class 'Firebase\JWT\JWT' not found
+#0 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Home->index()
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-01-11 01:17:11 --> Class 'Firebase\JWT\JWT' not found
+#0 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Home->index()
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-01-11 01:17:26 --> Class 'Firebase\JWT\JWT' not found
+#0 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Home->index()
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-01-11 01:17:34 --> Class 'Firebase\JWT\JWT' not found
+#0 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Home->index()
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-01-11 01:17:44 --> Class 'Firebase\JWT\JWT' not found
+#0 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Home->index()
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-01-11 01:17:45 --> Class 'Firebase\JWT\JWT' not found
+#0 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Home->index()
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-01-11 01:17:51 --> Class 'Firebase\JWT\JWT' not found
+#0 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Home->index()
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-01-11 01:17:58 --> Class 'Firebase\JWT' not found
+#0 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Home->index()
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-01-11 01:17:59 --> Class 'Firebase\JWT' not found
+#0 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Home->index()
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-01-11 01:18:16 --> Class 'Firebase\JWT' not found
+#0 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Home->index()
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-01-11 01:18:21 --> Class 'Firebase\JWT' not found
+#0 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Home->index()
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-01-11 01:18:22 --> Class 'Firebase\JWT' not found
+#0 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Home->index()
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-01-11 01:21:33 --> Class 'Firebase\JWT' not found
+#0 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Home->index()
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-01-11 01:21:46 --> Class 'Firebase\JWT\JWT' not found
+#0 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Home->index()
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-01-11 01:33:15 --> Algorithm not supported
+#0 C:\xampp\htdocs\api-absensi\vendor\firebase\php-jwt\src\JWT.php(180): Firebase\JWT\JWT::sign('eyJ0eXAiOiJKV1Q...', 'asd', 'absensi-secret-...')
+#1 C:\xampp\htdocs\api-absensi\app\Controllers\Home.php(15): Firebase\JWT\JWT::encode(Array, 'asd', 'absensi-secret-...')
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Home->index()
+#3 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-01-11 01:34:21 --> Algorithm not supported
+#0 C:\xampp\htdocs\api-absensi\vendor\firebase\php-jwt\src\JWT.php(180): Firebase\JWT\JWT::sign('eyJ0eXAiOiJKV1Q...', 'asd', 'absensi-secret-...')
+#1 C:\xampp\htdocs\api-absensi\app\Controllers\Home.php(15): Firebase\JWT\JWT::encode(Array, 'asd', 'absensi-secret-...')
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Home->index()
+#3 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-01-11 01:35:00 --> Algorithm not supported
+#0 C:\xampp\htdocs\api-absensi\vendor\firebase\php-jwt\src\JWT.php(180): Firebase\JWT\JWT::sign('eyJ0eXAiOiJKV1Q...', 'asd', 'absensi/secret/...')
+#1 C:\xampp\htdocs\api-absensi\app\Controllers\Home.php(15): Firebase\JWT\JWT::encode(Array, 'asd', 'absensi/secret/...')
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Home->index()
+#3 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-01-11 01:35:09 --> Algorithm not supported
+#0 C:\xampp\htdocs\api-absensi\vendor\firebase\php-jwt\src\JWT.php(180): Firebase\JWT\JWT::sign('eyJ0eXAiOiJKV1Q...', 'asd', 'absensisecretke...')
+#1 C:\xampp\htdocs\api-absensi\app\Controllers\Home.php(15): Firebase\JWT\JWT::encode(Array, 'asd', 'absensisecretke...')
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Home->index()
+#3 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-01-11 02:47:08 --> Undefined property: App\Controllers\Auth::$model_auth
+#0 C:\xampp\htdocs\api-absensi\app\Controllers\Auth.php(24): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 24, Array)
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Auth->login()
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#3 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-11 02:47:12 --> Undefined property: App\Controllers\Auth::$model_auth
+#0 C:\xampp\htdocs\api-absensi\app\Controllers\Auth.php(24): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 24, Array)
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Auth->login()
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#3 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-11 02:49:18 --> Call to undefined method App\Models\M_Siswa::cek_login
+#0 C:\xampp\htdocs\api-absensi\app\Controllers\Auth.php(24): CodeIgniter\Model->__call('cek_login', Array)
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Auth->login()
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#3 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-11 02:52:37 --> Unknown column 'siswa.deleted_at' in 'where clause'
+#0 C:\xampp\htdocs\api-absensi\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT *\nFROM `...')
+#1 C:\xampp\htdocs\api-absensi\system\Database\BaseConnection.php(741): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\api-absensi\system\Database\BaseConnection.php(669): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\api-absensi\system\Database\BaseBuilder.php(1860): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\api-absensi\system\Model.php(404): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\api-absensi\app\Controllers\Auth.php(24): CodeIgniter\Model->find(NULL)
+#6 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Auth->login()
+#7 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-01-11 02:57:33 --> Undefined index: password
+#0 C:\xampp\htdocs\api-absensi\app\Controllers\Auth.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 28, Array)
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Auth->login()
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#3 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-11 02:57:46 --> Trying to get property 'password' of non-object
+#0 C:\xampp\htdocs\api-absensi\app\Controllers\Auth.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 28, Array)
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Auth->login()
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#3 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-11 02:58:33 --> Undefined index: password
+#0 C:\xampp\htdocs\api-absensi\app\Controllers\Auth.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 28, Array)
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Auth->login()
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#3 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-11 02:59:00 --> Call to undefined method App\Models\M_Siswa::findOne
+#0 C:\xampp\htdocs\api-absensi\app\Controllers\Auth.php(24): CodeIgniter\Model->__call('findOne', Array)
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Auth->login()
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#3 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-11 02:59:28 --> Argument 1 passed to CodeIgniter\Model::findColumn() must be of the type string, array given, called in C:\xampp\htdocs\api-absensi\app\Controllers\Auth.php on line 24
+#0 C:\xampp\htdocs\api-absensi\app\Controllers\Auth.php(24): CodeIgniter\Model->findColumn(Array)
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Auth->login()
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#3 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-11 03:03:06 --> There is no data to update.
+#0 C:\xampp\htdocs\api-absensi\system\Model.php(834): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+#1 C:\xampp\htdocs\api-absensi\app\Controllers\Auth.php(62): CodeIgniter\Model->update(Array)
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Auth->login()
+#3 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#4 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-01-11 03:03:40 --> Unknown column 'updated_at' in 'field list'
+#0 C:\xampp\htdocs\api-absensi\system\Database\MySQLi\Connection.php(331): mysqli->query('UPDATE `siswa` ...')
+#1 C:\xampp\htdocs\api-absensi\system\Database\BaseConnection.php(741): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `siswa` ...')
+#2 C:\xampp\htdocs\api-absensi\system\Database\BaseConnection.php(669): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `siswa` ...')
+#3 C:\xampp\htdocs\api-absensi\system\Database\BaseBuilder.php(2456): CodeIgniter\Database\BaseConnection->query('UPDATE `siswa` ...', Array, false)
+#4 C:\xampp\htdocs\api-absensi\system\Model.php(889): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\api-absensi\app\Controllers\Auth.php(62): CodeIgniter\Model->update(Array, Array)
+#6 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Auth->login()
+#7 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-01-11 03:04:12 --> There is no data to update.
+#0 C:\xampp\htdocs\api-absensi\system\Model.php(834): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+#1 C:\xampp\htdocs\api-absensi\app\Controllers\Auth.php(62): CodeIgniter\Model->update(Array)
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Auth->login()
+#3 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#4 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-01-11 03:04:46 --> Unknown column 'updated_at' in 'field list'
+#0 C:\xampp\htdocs\api-absensi\system\Database\MySQLi\Connection.php(331): mysqli->query('UPDATE `siswa` ...')
+#1 C:\xampp\htdocs\api-absensi\system\Database\BaseConnection.php(741): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `siswa` ...')
+#2 C:\xampp\htdocs\api-absensi\system\Database\BaseConnection.php(669): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `siswa` ...')
+#3 C:\xampp\htdocs\api-absensi\system\Database\BaseBuilder.php(2456): CodeIgniter\Database\BaseConnection->query('UPDATE `siswa` ...', Array, false)
+#4 C:\xampp\htdocs\api-absensi\system\Model.php(889): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\api-absensi\app\Controllers\Auth.php(62): CodeIgniter\Model->update(Array, Array)
+#6 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Auth->login()
+#7 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-01-11 03:05:07 --> Unknown column 'updated_at' in 'field list'
+#0 C:\xampp\htdocs\api-absensi\system\Database\MySQLi\Connection.php(331): mysqli->query('UPDATE `siswa` ...')
+#1 C:\xampp\htdocs\api-absensi\system\Database\BaseConnection.php(741): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `siswa` ...')
+#2 C:\xampp\htdocs\api-absensi\system\Database\BaseConnection.php(669): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `siswa` ...')
+#3 C:\xampp\htdocs\api-absensi\system\Database\BaseBuilder.php(2456): CodeIgniter\Database\BaseConnection->query('UPDATE `siswa` ...', Array, false)
+#4 C:\xampp\htdocs\api-absensi\system\Model.php(889): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\api-absensi\app\Controllers\Auth.php(62): CodeIgniter\Model->update(Array, Array)
+#6 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Auth->login()
+#7 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-01-11 03:06:03 --> Unknown column 'updated_at' in 'field list'
+#0 C:\xampp\htdocs\api-absensi\system\Database\MySQLi\Connection.php(331): mysqli->query('UPDATE `siswa` ...')
+#1 C:\xampp\htdocs\api-absensi\system\Database\BaseConnection.php(741): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `siswa` ...')
+#2 C:\xampp\htdocs\api-absensi\system\Database\BaseConnection.php(669): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `siswa` ...')
+#3 C:\xampp\htdocs\api-absensi\system\Database\BaseBuilder.php(2456): CodeIgniter\Database\BaseConnection->query('UPDATE `siswa` ...', Array, false)
+#4 C:\xampp\htdocs\api-absensi\system\Model.php(889): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\api-absensi\app\Controllers\Auth.php(62): CodeIgniter\Model->update(Array, Array)
+#6 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Auth->login()
+#7 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-01-11 03:13:12 --> Undefined variable: f
+#0 C:\xampp\htdocs\api-absensi\app\Controllers\Auth.php(59): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 59, Array)
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Auth->login()
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#3 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-11 03:16:40 --> unlink($2y$10$xMA8rsYDP6tGTOTEWzpDaOY6Wkd37EN1Gp4EcqoVOrIZJSfXWeC6i): No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink($2y$10$x...', 'C:\\xampp\\htdocs...', 60, Array)
+#1 C:\xampp\htdocs\api-absensi\app\Controllers\Auth.php(60): unlink('$2y$10$xMA8rsYD...')
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Auth->login()
+#3 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#4 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-01-11 03:18:56 --> Undefined property: App\Controllers\Auth::$privateKey
+#0 C:\xampp\htdocs\api-absensi\app\Controllers\Auth.php(30): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 30, Array)
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Auth->login()
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#3 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-11 03:19:07 --> Undefined property: App\Controllers\Auth::$secret_key
+#0 C:\xampp\htdocs\api-absensi\app\Controllers\Auth.php(30): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 30, Array)
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Auth->login()
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#3 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-11 03:33:46 --> Undefined index: password
+#0 C:\xampp\htdocs\api-absensi\app\Controllers\Auth.php(26): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 26, Array)
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Auth->login()
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#3 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-11 03:35:03 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\api-absensi\app\Controllers\Auth.php(26): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 26, Array)
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Auth->login()
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#3 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-11 03:35:18 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\api-absensi\app\Controllers\Auth.php(26): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 26, Array)
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Auth->login()
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#3 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-11 03:35:32 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\api-absensi\app\Controllers\Auth.php(26): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 26, Array)
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Auth->login()
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#3 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-11 03:35:48 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\api-absensi\app\Controllers\Auth.php(26): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 26, Array)
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Auth->login()
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#3 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-11 03:36:18 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\api-absensi\app\Controllers\Auth.php(26): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 26, Array)
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Auth->login()
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#3 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-11 03:42:00 --> Call to a member function getErrors() on bool
+#0 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Auth->login()
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-01-11 04:10:05 --> Undefined offset: 1
+#0 C:\xampp\htdocs\api-absensi\app\Controllers\BaseController.php(56): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'C:\\xampp\\htdocs...', 56, Array)
+#1 C:\xampp\htdocs\api-absensi\app\Controllers\Auth.php(96): App\Controllers\BaseController->isValidToken()
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Auth->update()
+#3 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#4 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-01-11 04:10:50 --> Undefined offset: 1
+#0 C:\xampp\htdocs\api-absensi\app\Controllers\BaseController.php(56): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'C:\\xampp\\htdocs...', 56, Array)
+#1 C:\xampp\htdocs\api-absensi\app\Controllers\Auth.php(96): App\Controllers\BaseController->isValidToken()
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Auth->update()
+#3 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#4 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-01-11 04:11:06 --> Undefined offset: 1
+#0 C:\xampp\htdocs\api-absensi\app\Controllers\BaseController.php(56): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'C:\\xampp\\htdocs...', 56, Array)
+#1 C:\xampp\htdocs\api-absensi\app\Controllers\Auth.php(96): App\Controllers\BaseController->isValidToken()
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Auth->update()
+#3 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#4 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-01-11 04:11:44 --> Undefined offset: 1
+#0 C:\xampp\htdocs\api-absensi\app\Controllers\BaseController.php(56): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'C:\\xampp\\htdocs...', 56, Array)
+#1 C:\xampp\htdocs\api-absensi\app\Controllers\Auth.php(96): App\Controllers\BaseController->isValidToken()
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Auth->update()
+#3 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#4 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-01-11 04:12:11 --> Undefined offset: 1
+#0 C:\xampp\htdocs\api-absensi\app\Controllers\BaseController.php(56): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'C:\\xampp\\htdocs...', 56, Array)
+#1 C:\xampp\htdocs\api-absensi\app\Controllers\Auth.php(92): App\Controllers\BaseController->isValidToken()
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Auth->update()
+#3 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#4 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-01-11 04:13:09 --> Undefined offset: 1
+#0 C:\xampp\htdocs\api-absensi\app\Controllers\BaseController.php(57): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'C:\\xampp\\htdocs...', 57, Array)
+#1 C:\xampp\htdocs\api-absensi\app\Controllers\Auth.php(92): App\Controllers\BaseController->isValidToken()
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Auth->update()
+#3 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#4 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-01-11 04:13:36 --> syntax error, unexpected end of file, expecting function (T_FUNCTION) or const (T_CONST)
+#0 C:\xampp\htdocs\api-absensi\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('C:\\xampp\\htdocs...')
+#1 C:\xampp\htdocs\api-absensi\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 C:\xampp\htdocs\api-absensi\app\Controllers\Auth.php(16): spl_autoload_call('App\\Controllers...')
+#4 C:\xampp\htdocs\api-absensi\system\Router\Router.php(583): include_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\api-absensi\system\Router\Router.php(195): CodeIgniter\Router\Router->autoRoute('auth/update')
+#6 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(793): CodeIgniter\Router\Router->handle('auth/update')
+#7 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(364): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#8 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-01-11 04:14:03 --> syntax error, unexpected end of file, expecting function (T_FUNCTION) or const (T_CONST)
+#0 C:\xampp\htdocs\api-absensi\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('C:\\xampp\\htdocs...')
+#1 C:\xampp\htdocs\api-absensi\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 C:\xampp\htdocs\api-absensi\app\Controllers\Auth.php(16): spl_autoload_call('App\\Controllers...')
+#4 C:\xampp\htdocs\api-absensi\system\Router\Router.php(583): include_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\api-absensi\system\Router\Router.php(195): CodeIgniter\Router\Router->autoRoute('auth/update')
+#6 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(793): CodeIgniter\Router\Router->handle('auth/update')
+#7 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(364): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#8 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-01-11 04:15:55 --> syntax error, unexpected end of file, expecting function (T_FUNCTION) or const (T_CONST)
+#0 C:\xampp\htdocs\api-absensi\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('C:\\xampp\\htdocs...')
+#1 C:\xampp\htdocs\api-absensi\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 C:\xampp\htdocs\api-absensi\app\Controllers\Auth.php(16): spl_autoload_call('App\\Controllers...')
+#4 C:\xampp\htdocs\api-absensi\system\Router\Router.php(583): include_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\api-absensi\system\Router\Router.php(195): CodeIgniter\Router\Router->autoRoute('auth/update')
+#6 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(793): CodeIgniter\Router\Router->handle('auth/update')
+#7 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(364): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#8 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-01-11 04:16:25 --> syntax error, unexpected end of file, expecting function (T_FUNCTION) or const (T_CONST)
+#0 C:\xampp\htdocs\api-absensi\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('C:\\xampp\\htdocs...')
+#1 C:\xampp\htdocs\api-absensi\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 C:\xampp\htdocs\api-absensi\app\Controllers\Auth.php(16): spl_autoload_call('App\\Controllers...')
+#4 C:\xampp\htdocs\api-absensi\system\Router\Router.php(583): include_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\api-absensi\system\Router\Router.php(195): CodeIgniter\Router\Router->autoRoute('auth/update')
+#6 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(793): CodeIgniter\Router\Router->handle('auth/update')
+#7 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(364): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#8 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-01-11 04:17:11 --> syntax error, unexpected end of file, expecting function (T_FUNCTION) or const (T_CONST)
+#0 C:\xampp\htdocs\api-absensi\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('C:\\xampp\\htdocs...')
+#1 C:\xampp\htdocs\api-absensi\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 C:\xampp\htdocs\api-absensi\app\Controllers\Auth.php(16): spl_autoload_call('App\\Controllers...')
+#4 C:\xampp\htdocs\api-absensi\system\Router\Router.php(583): include_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\api-absensi\system\Router\Router.php(195): CodeIgniter\Router\Router->autoRoute('auth/update')
+#6 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(793): CodeIgniter\Router\Router->handle('auth/update')
+#7 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(364): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#8 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-01-11 04:20:36 --> syntax error, unexpected end of file, expecting function (T_FUNCTION) or const (T_CONST)
+#0 C:\xampp\htdocs\api-absensi\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('C:\\xampp\\htdocs...')
+#1 C:\xampp\htdocs\api-absensi\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 C:\xampp\htdocs\api-absensi\app\Controllers\Auth.php(16): spl_autoload_call('App\\Controllers...')
+#4 C:\xampp\htdocs\api-absensi\system\Router\Router.php(583): include_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\api-absensi\system\Router\Router.php(195): CodeIgniter\Router\Router->autoRoute('auth/update')
+#6 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(793): CodeIgniter\Router\Router->handle('auth/update')
+#7 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(364): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#8 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-01-11 04:21:01 --> syntax error, unexpected end of file, expecting function (T_FUNCTION) or const (T_CONST)
+#0 C:\xampp\htdocs\api-absensi\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('C:\\xampp\\htdocs...')
+#1 C:\xampp\htdocs\api-absensi\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 C:\xampp\htdocs\api-absensi\app\Controllers\Auth.php(16): spl_autoload_call('App\\Controllers...')
+#4 C:\xampp\htdocs\api-absensi\system\Router\Router.php(583): include_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\api-absensi\system\Router\Router.php(195): CodeIgniter\Router\Router->autoRoute('auth/update')
+#6 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(793): CodeIgniter\Router\Router->handle('auth/update')
+#7 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(364): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#8 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-01-11 04:21:03 --> syntax error, unexpected end of file, expecting function (T_FUNCTION) or const (T_CONST)
+#0 C:\xampp\htdocs\api-absensi\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('C:\\xampp\\htdocs...')
+#1 C:\xampp\htdocs\api-absensi\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 C:\xampp\htdocs\api-absensi\app\Controllers\Auth.php(16): spl_autoload_call('App\\Controllers...')
+#4 C:\xampp\htdocs\api-absensi\system\Router\Router.php(583): include_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\api-absensi\system\Router\Router.php(195): CodeIgniter\Router\Router->autoRoute('auth/update')
+#6 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(793): CodeIgniter\Router\Router->handle('auth/update')
+#7 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(364): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#8 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-01-11 04:21:18 --> syntax error, unexpected end of file, expecting function (T_FUNCTION) or const (T_CONST)
+#0 C:\xampp\htdocs\api-absensi\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('C:\\xampp\\htdocs...')
+#1 C:\xampp\htdocs\api-absensi\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 C:\xampp\htdocs\api-absensi\app\Controllers\Auth.php(15): spl_autoload_call('App\\Controllers...')
+#4 C:\xampp\htdocs\api-absensi\system\Router\Router.php(583): include_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\api-absensi\system\Router\Router.php(195): CodeIgniter\Router\Router->autoRoute('auth/update')
+#6 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(793): CodeIgniter\Router\Router->handle('auth/update')
+#7 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(364): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#8 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-01-11 04:21:45 --> syntax error, unexpected end of file, expecting function (T_FUNCTION) or const (T_CONST)
+#0 C:\xampp\htdocs\api-absensi\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('C:\\xampp\\htdocs...')
+#1 C:\xampp\htdocs\api-absensi\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 C:\xampp\htdocs\api-absensi\app\Controllers\Auth.php(17): spl_autoload_call('App\\Controllers...')
+#4 C:\xampp\htdocs\api-absensi\system\Router\Router.php(583): include_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\api-absensi\system\Router\Router.php(195): CodeIgniter\Router\Router->autoRoute('auth/update')
+#6 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(793): CodeIgniter\Router\Router->handle('auth/update')
+#7 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(364): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#8 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-01-11 04:22:03 --> syntax error, unexpected end of file, expecting function (T_FUNCTION) or const (T_CONST)
+#0 C:\xampp\htdocs\api-absensi\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('C:\\xampp\\htdocs...')
+#1 C:\xampp\htdocs\api-absensi\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 C:\xampp\htdocs\api-absensi\app\Controllers\Auth.php(17): spl_autoload_call('App\\Controllers...')
+#4 C:\xampp\htdocs\api-absensi\system\Router\Router.php(583): include_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\api-absensi\system\Router\Router.php(195): CodeIgniter\Router\Router->autoRoute('auth/update')
+#6 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(793): CodeIgniter\Router\Router->handle('auth/update')
+#7 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(364): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#8 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-01-11 04:22:31 --> App\Controllers\Auth cannot use CodeIgniter\HTTP\Request - it is not a trait
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-11 04:23:01 --> App\Controllers\Auth cannot use CodeIgniter\HTTP\Request - it is not a trait
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-11 04:28:13 --> Too few arguments to function App\Controllers\Auth::__construct(), 0 passed in C:\xampp\htdocs\api-absensi\system\CodeIgniter.php on line 890 and exactly 1 expected
+#0 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(890): App\Controllers\Auth->__construct()
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->createController()
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-01-11 04:28:22 --> Too few arguments to function App\Controllers\Auth::__construct(), 0 passed in C:\xampp\htdocs\api-absensi\system\CodeIgniter.php on line 890 and exactly 1 expected
+#0 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(890): App\Controllers\Auth->__construct()
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->createController()
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-01-11 04:29:05 --> Too few arguments to function App\Controllers\Auth::__construct(), 0 passed in C:\xampp\htdocs\api-absensi\system\CodeIgniter.php on line 890 and exactly 1 expected
+#0 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(890): App\Controllers\Auth->__construct()
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->createController()
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-01-11 04:37:27 --> Undefined variable: request
+#0 C:\xampp\htdocs\api-absensi\app\Controllers\Auth.php(92): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 92, Array)
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Auth->update()
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#3 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-11 05:49:53 --> Undefined property: App\Controllers\Home::$secretKey
+#0 C:\xampp\htdocs\api-absensi\app\Controllers\Home.php(15): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 15, Array)
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Home->index()
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-11 07:17:52 --> Duplicate entry '1231' for key 'PRIMARY'
+#0 C:\xampp\htdocs\api-absensi\system\Database\MySQLi\Connection.php(331): mysqli->query('INSERT INTO `si...')
+#1 C:\xampp\htdocs\api-absensi\system\Database\BaseConnection.php(741): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `si...')
+#2 C:\xampp\htdocs\api-absensi\system\Database\BaseConnection.php(669): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `si...')
+#3 C:\xampp\htdocs\api-absensi\system\Database\BaseBuilder.php(2249): CodeIgniter\Database\BaseConnection->query('INSERT INTO `si...', Array, false)
+#4 C:\xampp\htdocs\api-absensi\system\Model.php(755): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\api-absensi\app\Controllers\Auth.php(68): CodeIgniter\Model->insert(Array)
+#6 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Auth->login()
+#7 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-01-11 07:18:30 --> Duplicate entry '1231' for key 'PRIMARY'
+#0 C:\xampp\htdocs\api-absensi\system\Database\MySQLi\Connection.php(331): mysqli->query('INSERT INTO `si...')
+#1 C:\xampp\htdocs\api-absensi\system\Database\BaseConnection.php(741): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `si...')
+#2 C:\xampp\htdocs\api-absensi\system\Database\BaseConnection.php(669): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `si...')
+#3 C:\xampp\htdocs\api-absensi\system\Database\BaseBuilder.php(2249): CodeIgniter\Database\BaseConnection->query('INSERT INTO `si...', Array, false)
+#4 C:\xampp\htdocs\api-absensi\system\Model.php(755): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\api-absensi\app\Controllers\Auth.php(68): CodeIgniter\Model->insert(Array)
+#6 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Auth->login()
+#7 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-01-11 07:19:15 --> Duplicate entry '1231' for key 'PRIMARY'
+#0 C:\xampp\htdocs\api-absensi\system\Database\MySQLi\Connection.php(331): mysqli->query('INSERT INTO `si...')
+#1 C:\xampp\htdocs\api-absensi\system\Database\BaseConnection.php(741): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `si...')
+#2 C:\xampp\htdocs\api-absensi\system\Database\BaseConnection.php(669): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `si...')
+#3 C:\xampp\htdocs\api-absensi\system\Database\BaseBuilder.php(2249): CodeIgniter\Database\BaseConnection->query('INSERT INTO `si...', Array, false)
+#4 C:\xampp\htdocs\api-absensi\system\Model.php(755): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\api-absensi\app\Controllers\Auth.php(68): CodeIgniter\Model->insert(Array)
+#6 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Auth->login()
+#7 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-01-11 07:20:11 --> Duplicate entry '1231' for key 'PRIMARY'
+#0 C:\xampp\htdocs\api-absensi\system\Database\MySQLi\Connection.php(331): mysqli->query('INSERT INTO `si...')
+#1 C:\xampp\htdocs\api-absensi\system\Database\BaseConnection.php(741): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `si...')
+#2 C:\xampp\htdocs\api-absensi\system\Database\BaseConnection.php(669): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `si...')
+#3 C:\xampp\htdocs\api-absensi\system\Database\BaseBuilder.php(2249): CodeIgniter\Database\BaseConnection->query('INSERT INTO `si...', Array, false)
+#4 C:\xampp\htdocs\api-absensi\system\Model.php(755): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\api-absensi\app\Controllers\Auth.php(68): CodeIgniter\Model->insert(Array)
+#6 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Auth->login()
+#7 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2021-01-11 07:52:32 --> You must use the "set" method to update an entry.
+#0 C:\xampp\htdocs\api-absensi\system\Database\BaseBuilder.php(2430): CodeIgniter\Database\BaseBuilder->validateUpdate()
+#1 C:\xampp\htdocs\api-absensi\system\Model.php(889): CodeIgniter\Database\BaseBuilder->update()
+#2 C:\xampp\htdocs\api-absensi\app\Controllers\Auth.php(121): CodeIgniter\Model->update(NULL, Array)
+#3 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Auth->update()
+#4 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#5 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-01-11 07:53:02 --> You must use the "set" method to update an entry.
+#0 C:\xampp\htdocs\api-absensi\system\Database\BaseBuilder.php(2430): CodeIgniter\Database\BaseBuilder->validateUpdate()
+#1 C:\xampp\htdocs\api-absensi\system\Model.php(889): CodeIgniter\Database\BaseBuilder->update()
+#2 C:\xampp\htdocs\api-absensi\app\Controllers\Auth.php(121): CodeIgniter\Model->update(NULL, Array)
+#3 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Auth->update()
+#4 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#5 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-01-11 07:53:28 --> You must use the "set" method to update an entry.
+#0 C:\xampp\htdocs\api-absensi\system\Database\BaseBuilder.php(2430): CodeIgniter\Database\BaseBuilder->validateUpdate()
+#1 C:\xampp\htdocs\api-absensi\system\Model.php(889): CodeIgniter\Database\BaseBuilder->update()
+#2 C:\xampp\htdocs\api-absensi\app\Controllers\Auth.php(121): CodeIgniter\Model->update(NULL, Array)
+#3 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Auth->update()
+#4 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#5 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-01-11 07:54:07 --> You must use the "set" method to update an entry.
+#0 C:\xampp\htdocs\api-absensi\system\Database\BaseBuilder.php(2430): CodeIgniter\Database\BaseBuilder->validateUpdate()
+#1 C:\xampp\htdocs\api-absensi\system\Model.php(889): CodeIgniter\Database\BaseBuilder->update()
+#2 C:\xampp\htdocs\api-absensi\app\Controllers\Auth.php(121): CodeIgniter\Model->update(NULL, Array)
+#3 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Auth->update()
+#4 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#5 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-01-11 07:56:03 --> Undefined property: stdClass::$nis
+#0 C:\xampp\htdocs\api-absensi\app\Controllers\Auth.php(111): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 111, Array)
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Auth->update()
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#3 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-01-11 07:56:24 --> Cannot use object of type stdClass as array
+#0 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Auth->update()
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-01-11 07:57:04 --> You must use the "set" method to update an entry.
+#0 C:\xampp\htdocs\api-absensi\system\Database\BaseBuilder.php(2430): CodeIgniter\Database\BaseBuilder->validateUpdate()
+#1 C:\xampp\htdocs\api-absensi\system\Model.php(889): CodeIgniter\Database\BaseBuilder->update()
+#2 C:\xampp\htdocs\api-absensi\app\Controllers\Auth.php(121): CodeIgniter\Model->update(Array, Array)
+#3 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Auth->update()
+#4 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#5 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-01-11 07:57:31 --> Cannot use object of type stdClass as array
+#0 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Auth->update()
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-01-11 07:57:50 --> whereIn() expects $values to be of type array or closure
+#0 C:\xampp\htdocs\api-absensi\system\Database\BaseBuilder.php(853): CodeIgniter\Database\BaseBuilder->_whereIn('siswa.nis', Object(stdClass), false, 'AND ', NULL)
+#1 C:\xampp\htdocs\api-absensi\system\Model.php(883): CodeIgniter\Database\BaseBuilder->whereIn('siswa.nis', Object(stdClass))
+#2 C:\xampp\htdocs\api-absensi\app\Controllers\Auth.php(121): CodeIgniter\Model->update(Object(stdClass), Array)
+#3 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Auth->update()
+#4 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#5 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-01-11 07:58:30 --> You must use the "set" method to update an entry.
+#0 C:\xampp\htdocs\api-absensi\system\Database\BaseBuilder.php(2430): CodeIgniter\Database\BaseBuilder->validateUpdate()
+#1 C:\xampp\htdocs\api-absensi\system\Model.php(889): CodeIgniter\Database\BaseBuilder->update()
+#2 C:\xampp\htdocs\api-absensi\app\Controllers\Auth.php(121): CodeIgniter\Model->update(Array, Array)
+#3 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Auth->update()
+#4 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#5 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2021-01-11 23:17:51 --> Class 'App\Controllers\DateTime' not found
+#0 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Absent->save()
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absent))
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-01-11 23:18:40 --> Class 'App\Controllers\DateTime' not found
+#0 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Absent->save()
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absent))
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-01-11 23:19:19 --> Class 'App\Controllers\DateTime' not found
+#0 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Absent->save()
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absent))
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-01-11 23:20:10 --> Class 'App\Controllers\DateTime' not found
+#0 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Absent->save()
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absent))
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-01-11 23:21:29 --> Call to undefined function App\Controllers\now()
+#0 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Absent->save()
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absent))
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2021-01-11 23:27:18 --> App\Controllers\Absent cannot use CodeIgniter\I18n\Time - it is not a trait
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-11 23:28:00 --> App\Controllers\Absent cannot use CodeIgniter\I18n\Time - it is not a trait
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-11 23:28:58 --> App\Controllers\Absent cannot use CodeIgniter\I18n\Time - it is not a trait
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-11 23:29:21 --> App\Controllers\Absent cannot use CodeIgniter\I18n\Time - it is not a trait
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-01-11 23:31:33 --> Class 'App\Controllers\date' not found
+#0 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Absent->save()
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absent))
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
