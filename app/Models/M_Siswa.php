@@ -27,6 +27,6 @@ class M_Siswa extends Model
         // ],
     ];
 
-    protected $skipValidation = false;
+    protected $skipValidation = true;
 
 }

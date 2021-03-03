@@ -17,6 +17,8 @@ namespace App\Controllers;
 
 use CodeIgniter\Controller;
 use \Firebase\JWT\JWT;
+JWT::$leeway = 60;
+use App\Helpers\Constant;
 
 class BaseController extends Controller
 {
@@ -43,7 +45,9 @@ class BaseController extends Controller
         //--------------------------------------------------------------------
         // E.g.:
         // $this->session = \Config\Services::session();
-        $this->secret_key = env('app.secretKey');
+        date_default_timezone_set("Asia/Jakarta");
+        $this->secret_key = 'absensi-secret-key';
+        $this->constant = new Constant();
     }
 
 

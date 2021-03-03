@@ -1,12 +1,8 @@
 <?php
-
 namespace App\Controllers;
 
-use \Firebase\JWT\JWT;
-use CodeIgniter\RESTful\ResourceController;
 use App\Models\M_Absent;
 use CodeIgniter\API\ResponseTrait;
-
 class Absent extends BaseController
 {
     use ResponseTrait;
@@ -14,23 +10,21 @@ class Absent extends BaseController
     public function __construct()
     {
         $this->m_absent = new M_Absent();
-        date_default_timezone_set("Asia/Jakarta");
     }
 
     public function save()
     {
-        // return $this->isValidToken();
+        $token = $this->getParseToken();
+        $post = $this->request->getJSON();
 
-        $token      = $this->getParseToken();
-        $nis      = $this->request->getPost('nis');
-        $photo   = $this->request->getPost('photo');
-        $latitude   = $this->request->getPost('latitude');
-        $longitude   = $this->request->getPost('longitude');
+        $nis            = $token->data->nis;
+        $longitude      = $post->longitude;
+        $latitude       = $post->latitude;
+        $photo          = $post->photo;
 
         $tgl = date("Y-m-d H:i:s");
 
         if ($this->isValidToken()) {
-            
             $decoded = base64_decode($photo);
             $newName = $nis . '_' . strtotime($tgl) . '.png';
             file_put_contents('images/' . $newName, $decoded);
@@ -43,24 +37,31 @@ class Absent extends BaseController
                 'longitude' => $longitude,
             ];
 
+            $output = [
+                'code' => $this->constant->success,
+                'message' => null,
+                'data' =>  null
+            ];
 
             if (is_null($data['latitude']) || $data['latitude'] == "" || is_null($data['longitude']) || $data['longitude'] == "") {
-                $message = 'Failed get your location';
+                $output['message'] = 'Failed get your location';
             } else {
                 $save = $this->m_absent->insert($data);
-                $message = 'Success absent at ' . $tgl;
-                $data['save'] = $save;
+                if($save)
+                {
+                    $output['message']  = 'Success absent at ' . $tgl;
+                    $output['data']     = $data;
+                }
+                else {
+                    $output['code'] = $this->constant->error_array;
+                    $output['message']  = 'failed absent ' . $tgl;
+                    $output['error'] = $save->getMessage();
+                }
             }
 
-            $output = [
-                'status' => 200,
-                'result' => $message != 'Failed get your location',
-                'message' => $message,
-                'data' =>  $data
-            ];
         } else {
             $output = [
-                'status' => 401,
+                'code' => $this->constant->error,
                 'message' => 'failed authentication',
                 'data' =>  null
             ];

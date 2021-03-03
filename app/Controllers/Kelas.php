@@ -18,13 +18,13 @@ class Kelas extends BaseController
     {
         if ($this->isValidToken()) {
             $output = [
-                'status' => 200,
+                'code' => $this->constant->success,
                 'message' => 'success',
-                'data' =>  $this->m_kelas->findAll()
+                'data' =>  $this->m_kelas->findAll(),
             ];
         } else {
             $output = [
-                'status' => 401,
+                'code' => $this->constant->error,
                 'message' => 'failed authentication',
                 'data' =>  null
             ];

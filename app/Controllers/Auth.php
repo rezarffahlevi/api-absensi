@@ -3,7 +3,6 @@
 namespace App\Controllers;
 
 use \Firebase\JWT\JWT;
-use CodeIgniter\RESTful\ResourceController;
 use App\Models\M_Siswa;
 use CodeIgniter\API\ResponseTrait;
 
@@ -13,19 +12,19 @@ class Auth extends BaseController
 
     public function __construct()
     {
-        $this->m_siswa = new M_Siswa();;
+        $this->m_siswa = new M_Siswa();
     }
 
     public function login()
     {
-        $nis      = $this->request->getPost('nis');
-        $password   = $this->request->getPost('password');
+        $post = $this->request->getJSON();
 
-        $cek_login = $this->m_siswa->where(['nis' => $nis])->first();
+        $nis        = $post->nis;
+        $password   = $post->password;
+        $cek_login  = $this->m_siswa->where(['nis' => $nis])->first();
 
         if (!is_null($cek_login) && password_verify($password, $cek_login['password'])) {
             unset($cek_login['password']);
-            $temp = $cek_login['photo'];
             unset($cek_login['photo']);
             $secret_key = $this->secret_key;
             $issuer_claim = "THE_CLAIM"; // this can be the servername. Example: https://domain.com
@@ -44,14 +43,13 @@ class Auth extends BaseController
 
             $token = JWT::encode($token, $secret_key);
             $isRegister = is_null($cek_login['nama']);
-            $cek_login['photo'] = $temp;
             $output = [
-                'status' => 200,
-                'message' => $isRegister ? 'new register' : 'success login',
+                'code' => $this->constant->success,
+                'message' => $isRegister ? 'new user register' : 'success login',
                 'data' => [
                     "token" => $token,
                     "expireAt" => $expire_claim,
-                    "isRegister" => $isRegister,
+                    "isNewUser" => $isRegister,
                     "user" => $cek_login
                 ]
             ];
@@ -59,14 +57,13 @@ class Auth extends BaseController
             return $this->respond($output, 200);
         } else if (is_null($cek_login)) {
             $password_hash = password_hash($password, PASSWORD_BCRYPT);
-
             $data = [
                 'nis' => $nis,
                 'password' => $password_hash,
             ];
 
             $save = $this->m_siswa->insert($data);
-
+            unset($data['password']);
             $secret_key = $this->secret_key;
             $issuer_claim = "THE_CLAIM"; // this can be the servername. Example: https://domain.com
             $audience_claim = "THE_AUDIENCE";
@@ -84,20 +81,20 @@ class Auth extends BaseController
             $token = JWT::encode($token, $secret_key);
 
             $output = [
-                'status' => 200,
+                'code' => $this->constant->success,
                 'message' => 'new register',
                 'data' => [
                     "token" => $token,
                     "expireAt" => $expire_claim,
-                    "isRegister" => true,
+                    "isNewUser" => true,
                     "user" => $data
                 ]
             ];
             return $this->respond($output, 200);
         } else {
             $output = [
-                'status' => 401,
-                'message' => 'failed authentication',
+                'code' => $this->constant->error,
+                'message' => 'Wrong username / password',
                 'data' => null
             ];
             return $this->respond($output, 200);
@@ -106,28 +103,34 @@ class Auth extends BaseController
 
     public function update()
     {
-        // return $this->isValidToken();
+        $token = $this->getParseToken();
+        $post = $this->request->getJSON();
 
-        $token      = $this->getParseToken();
-        $nama      = $this->request->getPost('nama');
-        $id_kelas   = $this->request->getPost('idKelas');
+        $nis            = $token->data->nis;
+        $nama           = $post->nama;
+        $id_kelas       = $post->idKelas;
 
         if ($this->isValidToken()) {
             $data = [
                 'nama' => $nama,
                 'id_kelas' => $id_kelas,
             ];
-
-            $save = $this->m_siswa->update($token->data->nis, $data);
-
+            
             $output = [
-                'status' => 200,
+                'code' => $this->constant->success,
                 'message' => 'success',
                 'data' =>  $data
             ];
+
+            $save = $this->m_siswa->update($nis, $data);
+            if(!$save)
+            {
+                $output['code'] = $this->constant->error;
+                $output['error'] = $save->getMessage();
+            }
         } else {
             $output = [
-                'status' => 401,
+                'code' => $this->constant->error,
                 'message' => 'failed authentication',
                 'data' =>  null
             ];

@@ -29,5 +29,5 @@ class M_Kelas extends Model
         // ],
     ];
 
-    protected $skipValidation = false;
+    protected $skipValidation = true;
 }

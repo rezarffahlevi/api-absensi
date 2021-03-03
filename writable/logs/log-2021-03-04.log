@@ -1,0 +1,21 @@
+CRITICAL - 2021-03-04 01:04:13 --> Undefined property: stdClass::$nama
+#0 C:\xampp\htdocs\api-absensi\app\Controllers\Absent.php(23): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 23, Array)
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\Absent->save()
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absent))
+#3 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-03-04 01:09:07 --> Call to undefined method App\Models\M_Absent::getHistory
+#0 C:\xampp\htdocs\api-absensi\app\Controllers\History.php(23): CodeIgniter\Model->__call('getHistory', Array)
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\History->index()
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\History))
+#3 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-03-04 01:29:36 --> Call to undefined method App\Models\M_Absent::count
+#0 C:\xampp\htdocs\api-absensi\app\Controllers\History.php(25): CodeIgniter\Model->__call('count', Array)
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(918): App\Controllers\History->index()
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\History))
+#3 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
