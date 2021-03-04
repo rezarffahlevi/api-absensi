@@ -1,8 +1,10 @@
 <?php
+
 namespace App\Controllers;
 
 use App\Models\M_Absent;
 use CodeIgniter\API\ResponseTrait;
+
 class Absent extends BaseController
 {
     use ResponseTrait;
@@ -17,7 +19,6 @@ class Absent extends BaseController
         $token = $this->getParseToken();
         $post = $this->request->getJSON();
 
-        $nis            = $token->data->nis;
         $longitude      = $post->longitude;
         $latitude       = $post->latitude;
         $photo          = $post->photo;
@@ -25,6 +26,7 @@ class Absent extends BaseController
         $tgl = date("Y-m-d H:i:s");
 
         if ($this->isValidToken()) {
+            $nis     = $token->data->nis;
             $decoded = base64_decode($photo);
             $newName = $nis . '_' . strtotime($tgl) . '.png';
             file_put_contents('images/' . $newName, $decoded);
@@ -47,18 +49,15 @@ class Absent extends BaseController
                 $output['message'] = 'Failed get your location';
             } else {
                 $save = $this->m_absent->insert($data);
-                if($save)
-                {
+                if ($save) {
                     $output['message']  = 'Success absent at ' . $tgl;
                     $output['data']     = $data;
-                }
-                else {
+                } else {
                     $output['code'] = $this->constant->error_array;
                     $output['message']  = 'failed absent ' . $tgl;
                     $output['error'] = $save->getMessage();
                 }
             }
-
         } else {
             $output = [
                 'code' => $this->constant->error_auth,
