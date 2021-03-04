@@ -20,6 +20,14 @@ class Home extends BaseController
 		return $this->respond($output, 200);
 	}
 
+	public function img()
+	{
+		$get = $this->request->getGet();
+		$name = $get['name'];
+		header('Content-Type: image/jpg');
+		return "<img src='".base_url("public/images/". $name) ."'/>";
+	}
+
 	//--------------------------------------------------------------------
 
 }

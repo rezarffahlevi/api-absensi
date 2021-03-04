@@ -19,3 +19,17 @@ CRITICAL - 2021-03-04 01:29:36 --> Call to undefined method App\Models\M_Absent:
 #3 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #4 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
 #5 {main}
+CRITICAL - 2021-03-04 11:11:11 --> file_get_contents(images/123_1614799958.png): failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_conten...', 'C:\\xampp\\htdocs...', 28, Array)
+#1 C:\xampp\htdocs\api-absensi\app\Controllers\Home.php(28): file_get_contents('images/123_1614...')
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(936): App\Controllers\Home->img()
+#3 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-03-04 11:13:49 --> Call to undefined function App\Controllers\img()
+#0 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(936): App\Controllers\Home->img()
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}

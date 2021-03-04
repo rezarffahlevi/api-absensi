@@ -18,16 +18,25 @@ class History extends BaseController
     {
         if ($this->isValidToken()) {
             $get = $this->request->getGet();
+            $token = $this->getParseToken();
+
+            $nis            = $token->data->nis;
 
             $page = isset($get['page']) ? $get['page'] : 1;
             $limit = isset($get['limit']) ? $get['limit'] : 10;
 
             $start = ($page > 1) ? ($page * $limit) - $limit : 0;
 
+            $history = $this->m_absent->like('tgl',  date("Y-m-d"))->where('nis', $nis)->findAll($start, $limit);
+            $data = [];
+            foreach ($history as $dt) {
+                $dt['link'] = base_url('public/home/img?name=' . $dt['photo']);
+                $data[] = $dt;
+            }
             $output = [
                 'code'          => $this->constant->success,
                 'message'       => 'success',
-                'data'          =>  $this->m_absent->like('tgl',  date("Y-m-d"))->findAll($start, $limit),
+                'data'          =>  $data,
             ];
         } else {
             $output = [
