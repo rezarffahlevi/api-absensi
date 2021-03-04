@@ -33,3 +33,137 @@ CRITICAL - 2021-03-04 11:13:49 --> Call to undefined function App\Controllers\im
 #2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #3 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
 #4 {main}
+CRITICAL - 2021-03-04 12:15:28 --> Undefined variable: name
+#0 C:\xampp\htdocs\api-absensi\app\Controllers\Home.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 28, Array)
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(936): App\Controllers\Home->img()
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-03-04 12:15:30 --> Undefined variable: name
+#0 C:\xampp\htdocs\api-absensi\app\Controllers\Home.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 28, Array)
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(936): App\Controllers\Home->img()
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-03-04 12:15:31 --> Undefined variable: name
+#0 C:\xampp\htdocs\api-absensi\app\Controllers\Home.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 28, Array)
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(936): App\Controllers\Home->img()
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-03-04 12:15:31 --> Undefined variable: name
+#0 C:\xampp\htdocs\api-absensi\app\Controllers\Home.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 28, Array)
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(936): App\Controllers\Home->img()
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-03-04 12:15:37 --> Undefined variable: name
+#0 C:\xampp\htdocs\api-absensi\app\Controllers\Home.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 28, Array)
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(936): App\Controllers\Home->img()
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-03-04 12:22:58 --> Use of undefined constant PUBLICPATH - assumed 'PUBLICPATH' (this will throw an Error in a future version of PHP)
+#0 C:\xampp\htdocs\api-absensi\app\Controllers\Home.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Use of undefine...', 'C:\\xampp\\htdocs...', 32, Array)
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(936): App\Controllers\Home->img()
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-03-04 12:23:00 --> Use of undefined constant PUBLICPATH - assumed 'PUBLICPATH' (this will throw an Error in a future version of PHP)
+#0 C:\xampp\htdocs\api-absensi\app\Controllers\Home.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Use of undefine...', 'C:\\xampp\\htdocs...', 32, Array)
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(936): App\Controllers\Home->img()
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2021-03-04 12:26:36 --> Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\api-absensi\app\Config\Events.php:33)
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Cannot modify h...', 'C:\\xampp\\htdocs...', 28, Array)
+#1 C:\xampp\htdocs\api-absensi\app\Controllers\Home.php(28): header('Content-Type: i...')
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(936): App\Controllers\Home->img()
+#3 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-03-04 12:26:36 --> Uncaught ErrorException: Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\api-absensi\app\Config\Events.php:33) in C:\xampp\htdocs\api-absensi\system\Debug\Exceptions.php:137
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Cannot modify h...', 'C:\\xampp\\htdocs...', 137, Array)
+#1 C:\xampp\htdocs\api-absensi\system\Debug\Exceptions.php(137): header('HTTP/1.1 500 In...', true, 500)
+#2 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#3 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-03-04 12:27:59 --> Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\api-absensi\app\Config\Events.php:33)
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Cannot modify h...', 'C:\\xampp\\htdocs...', 28, Array)
+#1 C:\xampp\htdocs\api-absensi\app\Controllers\Home.php(28): header('Content-Type: i...')
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(936): App\Controllers\Home->img()
+#3 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-03-04 12:27:59 --> Uncaught ErrorException: Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\api-absensi\app\Config\Events.php:33) in C:\xampp\htdocs\api-absensi\system\Debug\Exceptions.php:137
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Cannot modify h...', 'C:\\xampp\\htdocs...', 137, Array)
+#1 C:\xampp\htdocs\api-absensi\system\Debug\Exceptions.php(137): header('HTTP/1.1 500 In...', true, 500)
+#2 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#3 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-03-04 12:28:01 --> Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\api-absensi\app\Config\Events.php:33)
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Cannot modify h...', 'C:\\xampp\\htdocs...', 28, Array)
+#1 C:\xampp\htdocs\api-absensi\app\Controllers\Home.php(28): header('Content-Type: i...')
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(936): App\Controllers\Home->img()
+#3 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-03-04 12:28:01 --> Uncaught ErrorException: Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\api-absensi\app\Config\Events.php:33) in C:\xampp\htdocs\api-absensi\system\Debug\Exceptions.php:137
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Cannot modify h...', 'C:\\xampp\\htdocs...', 137, Array)
+#1 C:\xampp\htdocs\api-absensi\system\Debug\Exceptions.php(137): header('HTTP/1.1 500 In...', true, 500)
+#2 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#3 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-03-04 12:28:01 --> Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\api-absensi\app\Config\Events.php:33)
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Cannot modify h...', 'C:\\xampp\\htdocs...', 28, Array)
+#1 C:\xampp\htdocs\api-absensi\app\Controllers\Home.php(28): header('Content-Type: i...')
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(936): App\Controllers\Home->img()
+#3 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-03-04 12:28:01 --> Uncaught ErrorException: Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\api-absensi\app\Config\Events.php:33) in C:\xampp\htdocs\api-absensi\system\Debug\Exceptions.php:137
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Cannot modify h...', 'C:\\xampp\\htdocs...', 137, Array)
+#1 C:\xampp\htdocs\api-absensi\system\Debug\Exceptions.php(137): header('HTTP/1.1 500 In...', true, 500)
+#2 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#3 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-03-04 12:28:01 --> Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\api-absensi\app\Config\Events.php:33)
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Cannot modify h...', 'C:\\xampp\\htdocs...', 28, Array)
+#1 C:\xampp\htdocs\api-absensi\app\Controllers\Home.php(28): header('Content-Type: i...')
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(936): App\Controllers\Home->img()
+#3 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2021-03-04 12:28:01 --> Uncaught ErrorException: Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\api-absensi\app\Config\Events.php:33) in C:\xampp\htdocs\api-absensi\system\Debug\Exceptions.php:137
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Cannot modify h...', 'C:\\xampp\\htdocs...', 137, Array)
+#1 C:\xampp\htdocs\api-absensi\system\Debug\Exceptions.php(137): header('HTTP/1.1 500 In...', true, 500)
+#2 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#3 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}

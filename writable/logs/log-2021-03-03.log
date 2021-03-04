@@ -162,3 +162,10 @@ CRITICAL - 2021-03-03 11:26:11 --> Undefined property: stdClass::$nis
 #3 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #4 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
 #5 {main}
+CRITICAL - 2021-03-03 23:09:31 --> syntax error, unexpected '}'
+#0 C:\xampp\htdocs\api-absensi\system\Router\Router.php(170): CodeIgniter\Router\Router->autoRoute('home/img')
+#1 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(816): CodeIgniter\Router\Router->handle('home/img')
+#2 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(385): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\api-absensi\system\CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\api-absensi\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}

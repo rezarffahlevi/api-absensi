@@ -25,7 +25,7 @@ class Home extends BaseController
 		$get = $this->request->getGet();
 		$name = $get['name'];
 		header('Content-Type: image/jpg');
-		return "<img src='".base_url("public/images/". $name) ."'/>";
+		return "<img src='".base_url("public/images/". $name) ."' onerror=\"this.onerror=null; this.src='".base_url("public/images/avatar.png")."'\"/>";
 	}
 
 	//--------------------------------------------------------------------

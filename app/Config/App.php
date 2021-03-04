@@ -21,7 +21,7 @@ class App extends BaseConfig
 	| environments.
 	|
 	*/
-	public $baseURL = 'http://api-absensiku.herokuapp.com/';
+	public $baseURL = 'http://localhost/api-absensi/';
 
 	/*
 	|--------------------------------------------------------------------------
