@@ -130,7 +130,7 @@ class Auth extends BaseController
             }
         } else {
             $output = [
-                'code' => $this->constant->error,
+                'code' => $this->constant->error_auth,
                 'message' => 'failed authentication',
                 'data' =>  null
             ];
