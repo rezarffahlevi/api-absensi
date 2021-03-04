@@ -27,7 +27,7 @@ class History extends BaseController
 
             $start = ($page > 1) ? ($page * $limit) - $limit : 0;
 
-            $history = $this->m_absent->join('siswa', 'nis')->join('kelas', 'id_kelas')->like('tgl',  date("Y-m-d"))->where('nis', $nis)->findAll($start, $limit);
+            $history = $this->m_absent->like('tgl',  date("Y-m-d"))->where('nis', $nis)->findAll($start, $limit);
             $data = [];
             foreach ($history as $dt) {
                 $dt['link'] = base_url('public/home/img?name=' . $dt['photo']);
