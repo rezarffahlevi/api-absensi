@@ -16,6 +16,9 @@ namespace App\Controllers;
  */
 
 use CodeIgniter\Controller;
+use CodeIgniter\HTTP\RequestInterface;
+use CodeIgniter\HTTP\ResponseInterface;
+use Psr\Log\LoggerInterface;
 use \Firebase\JWT\JWT;
 JWT::$leeway = 60;
 use App\Helpers\Constant;
@@ -30,7 +33,14 @@ class BaseController extends Controller
      *
      * @var array
      */
-    protected $helpers = [];
+    protected $helpers = ['form', 'Common'];
+    
+    public $session;
+    protected $blank;
+    protected $private;
+    protected $public;
+    protected $uri;
+    protected $db;
 
     /**
      * Constructor.
@@ -48,6 +58,12 @@ class BaseController extends Controller
         date_default_timezone_set("Asia/Jakarta");
         $this->secret_key = 'absensi-secret-key';
         $this->constant = new Constant();
+        
+        $this->session  = \Config\Services::session();
+        $this->blank    = env('theme.blank');
+        $this->private  = env('theme.private');
+        $this->public   = env('theme.public');
+        $this->uri      = service('uri');
     }
 
 

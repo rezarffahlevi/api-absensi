@@ -100,3 +100,25 @@
 # honeypot.name = 'honeypot'
 # honeypot.template = '<label>{label}</label><input type="text" name="{name}" value=""/>'
 # honeypot.container = '<div style="display:none">{template}</div>'
+
+#--------------------------------------------------------------------
+# SITE
+#--------------------------------------------------------------------
+site.name = 'Admin'
+site.start_year = 2021
+site.version = '0.0.1'
+
+#--------------------------------------------------------------------
+# THEME
+#--------------------------------------------------------------------
+theme.name = 'default'
+theme.blank = 'blank'
+theme.private = 'private'
+theme.public = 'public'
+
+
+database.default.hostname = sql6.freemysqlhosting.net
+database.default.database = sql6396448
+database.default.username = sql6396448
+database.default.password = 9pNqc9B5G5
+database.default.DBDriver = MySQLi

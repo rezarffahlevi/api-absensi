@@ -9,7 +9,7 @@ class M_Absent extends Model
 
     // protected $useSoftDeletes   = true;
 
-    protected $allowedFields    = ['id', 'tgl', 'nis', 'photo', 'latitude', 'longitude'];
+    protected $allowedFields    = ['tgl', 'nis', 'status', 'notes', 'photo', 'latitude', 'longitude', 'alamat'];
 
     // protected $useTimestamps    = true;
 

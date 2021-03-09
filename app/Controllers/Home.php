@@ -17,7 +17,7 @@ class Home extends BaseController
 		$output = [
 			'status' => 200,
 			'message' => 'This is home!',
-			'data' => null
+			'data' => base_url('auth/')
 		];
 		return $this->respond($output, 200);
 	}

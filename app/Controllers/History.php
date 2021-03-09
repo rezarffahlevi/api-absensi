@@ -27,16 +27,19 @@ class History extends BaseController
 
             $start = ($page > 1) ? ($page * $limit) - $limit : 0;
 
-            $history = $this->m_absent->like('tgl',  date("Y-m-d"))->where('nis', $nis)->findAll($start, $limit);
+            $history = $this->m_absent->where('nis', $nis)->orderBy('id', 'DESC')->findAll($limit, $start);;
             $data = [];
             foreach ($history as $dt) {
-                $dt['link'] = base_url('public/home/img?name=' . $dt['photo']);
+                $dt['link'] = base_url('home/img?name=' . $dt['photo']);
                 $data[] = $dt;
             }
             $output = [
                 'code'          => $this->constant->success,
                 'message'       => 'success',
-                'data'          =>  $data,
+                'data'          => $data,
+                'page'          => $page,
+                'pages'         => ceil($this->m_absent->countAll()/$limit),
+                'limit'         => $limit,
             ];
         } else {
             $output = [

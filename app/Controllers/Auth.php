@@ -4,17 +4,119 @@ namespace App\Controllers;
 
 use \Firebase\JWT\JWT;
 use App\Models\M_Siswa;
+use App\Models\M_User;
 use CodeIgniter\API\ResponseTrait;
 
 class Auth extends BaseController
 {
     use ResponseTrait;
+    protected $auth;
 
     public function __construct()
     {
         $this->m_siswa = new M_Siswa();
+        $this->m_user = new M_User();
+        $this->auth = service('auth');
     }
 
+    public function index()
+    {
+        if ($this->auth->logged()) {
+            return redirect()->to(base_url('/admin/home'));
+        }
+        helper('form');
+        setTitle('Login');
+        return view("{$this->public}/auth/login");
+    }
+
+    public function login_attemp()
+    {
+        $login          = FALSE;
+        $redirect       = redirect()->to(base_url('/auth'));
+        $notif          = ['type' => 'warning', 'msg' => 'Invalid Credential'];
+        $user           = [];
+
+        if ($this->request->getMethod(TRUE) == 'POST') {
+            $username   = $this->request->getPost('username');
+            $password   = $this->request->getPost('password');
+            $remember   = $this->request->getPost('remember');
+
+            // define validations
+            $rules = [
+                'username'  => 'required',
+                'password'  => 'required|min_length[3]',
+            ];
+            $messages = [
+                'username'  => [
+                    'required'      => 'Silahkan masukkan username.',
+                ],
+                'password'  => [
+                    'required'      => 'Silahkan masukkan password.',
+                    'min_length'    => 'Silahkan masukkan password dengan min. {param} karakter.'
+                ],
+            ];
+
+            if ($this->validate($rules, $messages)) {
+                $notif  = ['type' => 'warning', 'msg' => 'Username atau password anda salah.'];
+                $user   = $this->m_user->where(['username' => $username])->first();
+                if (!empty($user)) {
+                    if ($user['password'] == $password) {
+                        $notif      = [];
+                        $notif[]    = ['type' => 'success', 'msg' => 'Berhasil login.'];
+                        $redirect   = redirect()->to(base_url('admin/home'));
+                        $login = TRUE;
+                    } else {
+                        $user       = [];
+                    }
+                }
+            } else {
+                $notif['msg']   = parseErrorValidation($this->validator->getErrors());
+            }
+
+            if ($login == TRUE) {
+                $user = $this->auth->login($user);
+
+                // remember me
+                if ($remember == "1") {
+                    $remember = [
+                        'name'      => 'remember',
+                        'value'     => 'true',
+                        'expire'    => \time() + 3600,
+                        'httponly'  => FALSE
+                    ];
+                    $user_id = [
+                        'name'      => 'user_id',
+                        'value'     => base64_encode($user['id']),
+                        'expire'    => \time() + 3600,
+                        'httponly'  => FALSE
+                    ];
+
+                    $redirect->setCookie($remember)->setCookie($user_id);
+                }
+            }
+        }
+
+        return $redirect->withInput()->with('notif', $notif);
+    }
+
+    public function logout_attempt()
+    {
+        $redirect = redirect()->to(base_url('/auth'));
+
+        if (!$this->auth->logged()) {
+            return $redirect;
+        }
+        
+        $this->auth->logout();
+        
+        return $redirect
+            ->deleteCookie('user_id')
+            ->deleteCookie('remember')
+            ->with('notif', ['type' => 'success', 'msg' => 'Anda berhasil logout.']);
+    }
+
+
+    // ==== API ==== //
     public function login()
     {
         $post = $this->request->getJSON();
@@ -115,7 +217,7 @@ class Auth extends BaseController
                 'nama' => $nama,
                 'id_kelas' => $id_kelas,
             ];
-            
+
             $output = [
                 'code' => $this->constant->success,
                 'message' => 'success',
@@ -123,8 +225,7 @@ class Auth extends BaseController
             ];
 
             $save = $this->m_siswa->update($nis, $data);
-            if(!$save)
-            {
+            if (!$save) {
                 $output['code'] = $this->constant->error;
                 $output['error'] = $save->getMessage();
             }

@@ -19,11 +19,14 @@ class Absent extends BaseController
         $token = $this->getParseToken();
         $post = $this->request->getJSON();
 
-        $longitude      = $post->longitude;
-        $latitude       = $post->latitude;
-        $photo          = $post->photo;
-
-        $tgl = date("Y-m-d H:i:s");
+        $id             = $post->id ?? null;
+        $longitude      = $post->longitude ?? null;
+        $latitude       = $post->latitude ?? null;
+        $alamat         = $post->alamat ?? null;
+        $status         = $post->status ?? null;
+        $notes          = $post->notes ?? null;
+        $photo          = $post->photo ?? null;
+        $tgl            = $post->date ?? date("Y-m-d H:i:s");
 
         if ($this->isValidToken()) {
             $nis     = $token->data->nis;
@@ -32,12 +35,21 @@ class Absent extends BaseController
             file_put_contents('images/' . $newName, $decoded);
 
             $data = [
-                'tgl' => $tgl,
-                'nis' => $nis,
-                'photo' => $newName,
-                'latitude' => $latitude,
+                'tgl'       => $tgl,
+                'nis'       => $nis,
+                'status'    => $status,
+                'notes'     => $notes,
+                'photo'     => $newName,
+                'latitude'  => $latitude,
                 'longitude' => $longitude,
+                'alamat'    => $alamat,
             ];
+
+            if (isset($id))
+            {
+                $data['id'] = $id;
+                unset($data['tgl']);
+            }
 
             $output = [
                 'code' => $this->constant->success,
@@ -45,10 +57,11 @@ class Absent extends BaseController
                 'data' =>  null
             ];
 
-            if (is_null($data['latitude']) || $data['latitude'] == "" || is_null($data['longitude']) || $data['longitude'] == "") {
+            if ($data['status'] == 'hadir' && (is_null($data['latitude']) || $data['latitude'] == "" || is_null($data['longitude']) || $data['longitude'] == "")) {
+                $output['code'] = $this->constant->error;
                 $output['message'] = 'Failed get your location';
             } else {
-                $save = $this->m_absent->insert($data);
+                $save = $this->m_absent->save($data);
                 if ($save) {
                     $output['message']  = 'Success absent at ' . $tgl;
                     $output['data']     = $data;

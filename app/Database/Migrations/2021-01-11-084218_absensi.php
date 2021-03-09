@@ -24,6 +24,7 @@ class Absensi extends Migration
 			],
 			'photo' => [
 				'type' => 'TEXT',
+				'null'          => TRUE,
 			],
 			'latitude' => [
 				'type' => 'VARCHAR',
@@ -33,6 +34,19 @@ class Absensi extends Migration
 			'longitude' => [
 				'type' => 'VARCHAR',
 				'constraint' => 250,
+				'null'          => TRUE,
+			],
+			'alamat' => [
+				'type' => 'TEXT',
+				'null'          => TRUE,
+			],
+			'status' => [
+				'type' => 'VARCHAR',
+				'constraint' => 250,
+				'null'          => TRUE,
+			],
+			'notes' => [
+				'type' => 'TEXT',
 				'null'          => TRUE,
 			],
 		]);
