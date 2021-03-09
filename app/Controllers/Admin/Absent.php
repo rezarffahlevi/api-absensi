@@ -2,7 +2,7 @@
 
 namespace App\Controllers\Admin;
 
-use App\Models\M_user;
+use App\Models\M_User;
 use App\Models\M_Absent;
 use App\Controllers\BaseController;
 use CodeIgniter\API\ResponseTrait;
@@ -10,13 +10,14 @@ use CodeIgniter\API\ResponseTrait;
 class Absent extends BaseController
 {
     protected $m_user;
+    protected $m_absent;
     use ResponseTrait;
 
     function __construct()
     {
         setTitle('User');
 
-        $this->m_user   = new M_user();
+        $this->m_user   = new M_User();
         $this->m_absent   = new M_Absent();
     }
 
