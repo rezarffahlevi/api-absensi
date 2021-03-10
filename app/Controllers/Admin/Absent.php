@@ -42,11 +42,11 @@ class Absent extends BaseController
             'data'              => []
         ];
 
-        $data   = $this->m_absent->join('siswa', 'nis')->limit($length, $start);
+        $data   = $this->m_absent->join('siswa', 'nis');
         if ($search != '') {
             $data->like('nis', $search);
         }
-        $query  = $data->orderBy('id', 'DESC')->findAll();
+        $query  = $data->orderBy('id', 'DESC')->findAll($length, $start);
 
         if ($search != '') {
             $jum    = $this->m_absent->like('nis', $search)->countAllResults();

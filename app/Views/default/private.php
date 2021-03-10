@@ -32,7 +32,7 @@
             <?= $this->renderSection('content_header') ?>
 
             <!-- Content. Contains page content -->
-            <section class="content">
+            <section class="content" style="padding-bottom: 40px;">
                 <div class="container-fluid">
                     <?= $this->renderSection('content') ?>
                 </div>
