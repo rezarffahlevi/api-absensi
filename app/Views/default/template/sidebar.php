@@ -9,6 +9,12 @@ if ($uri->getTotalSegments() > 0) {
     $submenu_active = $uri->getPath();
 }
 
+$kelas = session()->get('kelas');
+$menu_kelas = [];
+foreach ($kelas as $key => $value) {
+    $menu_kelas[$key]['title'] = "Kelas " . $value['kelas'];
+    $menu_kelas[$key]['link'] = 'absent/kelas/' . $value['id_kelas'];
+}
 $menu   = [
     [
         'title'     => 'Home',
@@ -20,7 +26,7 @@ $menu   = [
         'title'     => 'Absensi',
         'link'      => 'absent',
         'icon'      => 'fa-university',
-        'submenu'   => []
+        'submenu'   => $menu_kelas
     ],
     [
         'title'     => 'Master Data',
@@ -82,7 +88,7 @@ $menu   = [
                 <img src="<?= asset_url('img/avatar5.png'); ?>" class="img-circle elevation-2" alt="User Image">
             </div>
             <div class="info">
-                <a href="#" class="d-block"><?= session('user')['nama']?></a>
+                <a href="#" class="d-block"><?= session('user')['nama'] ?></a>
             </div>
         </div>
 

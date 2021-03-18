@@ -9,7 +9,7 @@
 <div class="content-header">
     <div class="card bg-transparent shadow-none">
         <div class="card-header d-flex p-0">
-            <h3 class="p-3 m-0">Daftar Absensi</h3>
+            <h3 class="p-3 m-0">Daftar Absensi <?= $kelas ?></h3>
         </div>
     </div>
 </div>
@@ -24,6 +24,7 @@
     let hash = '<?= csrf_hash() ?>';
 
     $(document).ready(function() {
+        let id_kelas = <?= $id ?>;
         dt = $('#table-absent').DataTable({
             stateSave: true,
             ordering: false,
@@ -34,6 +35,7 @@
                 type: 'POST',
                 data: function(d) {
                     d[token] = hash;
+                    d['id'] = id_kelas;
                 },
             },
             drawCallback: function(settings) {
@@ -59,7 +61,7 @@
         }
 
         $.ajax({
-            url: '<?= admin_url('employee/ajax_submit_user') ?>',
+            url: '<?= admin_url('absent/ajax_submit_user') ?>',
             type: 'post',
             data,
             success: function(json) {
@@ -72,7 +74,7 @@
                     }
                 } else {
                     dt.ajax.reload();
-                    $('#employeeModal').modal('hide');
+                    $('#absentModal').modal('hide');
                 }
             }
         });
@@ -85,7 +87,7 @@
         data[token] = hash;
 
         $.ajax({
-            url: '<?= admin_url('employee/ajax_delete_user') ?>',
+            url: '<?= admin_url('absent/ajax_delete_absent') ?>',
             type: 'post',
             data,
             success: function(json) {
@@ -93,29 +95,39 @@
                 hash = json[token];
 
                 dt.ajax.reload();
-                $('#deleteEmployeeModal').modal('hide');
+                $('#deleteAbsentModal').modal('hide');
             }
         });
     });
 
-    function call_modal(...param) {
-        $("#form-employee")[0].reset();
+    function call_modal(type, param) {
+        $("#form-absent")[0].reset();
         $('#id').val('');
         $('.text-validation').text('');
 
-        if (param[0] == 'add') {
+        let row = JSON.parse(atob(param));
+        console.log(row)
+        if (type == 'add') {
             id = '';
-            $('#employeeModal').modal('show');
-        } else if (param[0] == 'edit') {
-            id = param[1];
-            $('#name').val(param[2]);
-            $('#email').val(param[3]);
-            $('#address').val(param[4]);
+            $('#absentModal').modal('show');
+        } else if (type == 'edit') {
+            id = row.nis;
+            $('#nis').val(row.nis);
+            $('#nama').val(row.nama);
+            $('#status').val(row.status);
+            $('#keterangan').val(row.notes);
 
-            $('#employeeModal').modal('show');
+            $('#absentModal').modal('show');
+        } else if (type == 'delete') {
+            id = row;
+            $('#deleteAbsentModal').modal('show');
         } else {
-            id = param[1];
-            $('#deleteEmployeeModal').modal('show');
+            $('#nis').val(row.nis);
+            $('#nama').val(row.nama);
+            $('#status').val(row.status);
+            $('#keterangan').val(row.notes);
+
+            $('#absentDetailModal').modal('show');
         }
 
     }
@@ -123,51 +135,84 @@
 <?= $this->endSection('javascript') ?>
 
 <?= $this->section('content') ?>
-<div class="box box-primary">
-    <div class="box-body">
-        <!-- <a href="javascript:;" class="btn btn-default mb-4" onclick="call_modal('add')"><i class="nav-icon fas fa-plus"></i> New User</a> -->
-        <div class="col-md-12 table-responsive p-0">
-            <table id="table-absent" class="table table-bordered">
-                <thead>
-                    <tr>
-                        <th>No</th>
-                        <th>Nis</th>
-                        <th>Nama</th>
-                        <th>Waktu</th>
-                        <th>Status</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-            </table>
+<div class="row">
+    <div class="col-12 col-sm-12">
+        <div class="card card-primary card-outline card-outline-tabs">
+            <div class="card-header p-0 border-bottom-0">
+                <ul class="nav nav-tabs" id="custom-tabs-four-tab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="custom-tabs-four-home-tab" data-toggle="pill" href="#custom-tabs-four-home" role="tab" aria-controls="custom-tabs-four-home" aria-selected="true">Kehadiran</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="custom-tabs-four-profile-tab" data-toggle="pill" href="#custom-tabs-four-profile" role="tab" aria-controls="custom-tabs-four-profile" aria-selected="false">Informasi</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="card-body">
+                <div class="tab-content" id="custom-tabs-four-tabContent">
+                    <div class="tab-pane fade show active" id="custom-tabs-four-home" role="tabpanel" aria-labelledby="custom-tabs-four-home-tab">
+                        <div class="box box-primary">
+                            <div class="box-body">
+                                <!-- <a href="javascript:;" class="btn btn-default mb-4" onclick="call_modal('add')"><i class="nav-icon fas fa-plus"></i> New User</a> -->
+                                <div class="col-md-12 table-responsive p-0">
+                                    <table id="table-absent" class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>No</th>
+                                                <th>Nis</th>
+                                                <th>Nama</th>
+                                                <th>Waktu</th>
+                                                <th>Status</th>
+                                                <th>Aksi</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="custom-tabs-four-profile" role="tabpanel" aria-labelledby="custom-tabs-four-profile-tab">
+                        Mauris tincidunt mi at erat gravida, eget tristique urna bibendum. Mauris pharetra purus ut ligula tempor, et vulputate metus facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas sollicitudin, nisi a luctus interdum, nisl ligula placerat mi, quis posuere purus ligula eu lectus. Donec nunc tellus, elementum sit amet ultricies at, posuere nec nunc. Nunc euismod pellentesque diam.
+                    </div>
+                </div>
+            </div>
+            <!-- /.card -->
         </div>
     </div>
 </div>
 
-<div class="modal fade" id="employeeModal" tabindex="-1" role="dialog" aria-labelledby="employeeModalLabel" aria-hidden="true">
+<div class="modal fade" id="absentModal" tabindex="-1" role="dialog" aria-labelledby="absentModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="employeeModalLabel">Form Employee</h5>
+                <h5 class="modal-title" id="absentModalLabel">Form Absen</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
-                <form method="POST" id="form-employee">
+                <form method="POST" id="form-absent">
                     <div class="form-group">
-                        <label for="name">Name:</label>
-                        <input type="name" name="name" id="name" class="form-control">
+                        <label for="nis">NIS:</label>
+                        <input type="nis" name="nis" id="nis" class="form-control" readonly>
                         <span class="text-danger text-validation" id="validation_name"></span>
                     </div>
                     <div class="form-group">
-                        <label for="email">Email:</label>
-                        <input type="email" name="email" id="email" class="form-control">
-                        <span class="text-danger text-validation" id="validation_email"></span>
+                        <label for="nama">Nama:</label>
+                        <input type="nama" name="nama" id="nama" class="form-control" readonly>
+                        <span class="text-danger text-validation" id="validation_nama"></span>
                     </div>
+
                     <div class="form-group">
-                        <label for="address">Address:</label>
-                        <textarea name="address" id="address" class="form-control"></textarea>
-                        <span class="text-danger text-validation" id="validation_address"></span>
+                        <label for="status">Status:</label>
+                        <input type="text" name="status" id="status" class="form-control">
+                        <span class="text-danger text-validation" id="validation_status"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="keterangan">Keterangan:</label>
+                        <textarea name="keterangan" id="keterangan" class="form-control"></textarea>
+                        <span class="text-danger text-validation" id="validation_keterangan"></span>
                     </div>
                 </form>
             </div>
@@ -179,11 +224,75 @@
     </div>
 </div>
 
-<div class="modal fade" id="deleteEmployeeModal" tabindex="-1" role="dialog" aria-labelledby="deleteEmployeeModalLabel" aria-hidden="true">
+<div class="modal fade" id="absentDetailModal" tabindex="-1" role="dialog" aria-labelledby="absentDetailModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="absentDetailModalLabel">Detail</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="dtl_nis">NIS:</label>
+                            <input type="dtl_nis" name="dtl_nis" id="dtl_nis" class="form-control">
+                            <span class="text-danger text-validation" id="validation_dtl_nis"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="dtl_nama">Nama:</label>
+                            <input type="dtl_nama" name="dtl_nama" id="dtl_nama" class="form-control">
+                            <span class="text-danger text-validation" id="validation_dtl_nama"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="dtl_tgl">Waktu:</label>
+                            <input type="dtl_tgl" name="dtl_tgl" id="dtl_tgl" class="form-control">
+                            <span class="text-danger text-validation" id="validation_dtl_tgl"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="dtl_nama">Kelas:</label>
+                            <input type="dtl_nama" name="dtl_nama" id="dtl_nama" class="form-control">
+                            <span class="text-danger text-validation" id="validation_dtl_nama"></span>
+                        </div>
+                    </div>
+
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="status">Status:</label>
+                            <input type="text" name="status" id="dtl_status" class="form-control">
+                            <span class="text-danger text-validation" id="validation_status"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="keterangan">Keterangan:</label>
+                            <textarea name="keterangan" id="dtl_keterangan" class="form-control"></textarea>
+                            <span class="text-danger text-validation" id="validation_keterangan"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="dtl_nis">Longitude Latitude:</label>
+                            <input type="dtl_nis" name="dtl_nis" id="dtl_longlat" class="form-control">
+                            <span class="text-danger text-validation" id="validation_dtl_nis"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="keterangan">Alamat:</label>
+                            <textarea name="keterangan" id="dtl_keterangan" class="form-control"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="deleteAbsentModal" tabindex="-1" role="dialog" aria-labelledby="deleteAbsentModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="deleteEmployeeModalLabel">Delete Employee</h5>
+                <h5 class="modal-title" id="deleteAbsentModalLabel">Delete Absent</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>

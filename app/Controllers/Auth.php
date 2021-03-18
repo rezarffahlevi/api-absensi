@@ -5,6 +5,7 @@ namespace App\Controllers;
 use \Firebase\JWT\JWT;
 use App\Models\M_Siswa;
 use App\Models\M_User;
+use App\Models\M_Kelas;
 use CodeIgniter\API\ResponseTrait;
 
 class Auth extends BaseController
@@ -16,6 +17,7 @@ class Auth extends BaseController
     {
         $this->m_siswa = new M_Siswa();
         $this->m_user = new M_User();
+        $this->m_kelas = new M_Kelas();
         $this->auth = service('auth');
     }
 
@@ -75,6 +77,7 @@ class Auth extends BaseController
 
             if ($login == TRUE) {
                 $user = $this->auth->login($user);
+                session()->set('kelas', $this->m_kelas->findAll());
 
                 // remember me
                 if ($remember == "1") {

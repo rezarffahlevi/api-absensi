@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,300italic" />
     <!-- AdminLTE -->
     <link rel="stylesheet" href="<?= asset_url('css/adminlte.min.css'); ?>" />
-    <link rel="stylesheet" href="<?= asset_url('css/component.min.css'); ?>" />
+    <link rel="stylesheet" href="<?= asset_url('css/alt/adminlte.components.min.css'); ?>" />
     <!-- Plugins -->
     <link rel="stylesheet" href="<?= asset_url('plugins/fontawesome-free/css/all.min.css'); ?>" />
     <link rel="stylesheet" href="<?= asset_url('plugins/overlayScrollbars/css/OverlayScrollbars.min.css'); ?>" />

@@ -27,7 +27,7 @@ class Home extends BaseController
 		$get = $this->request->getGet();
 		$name = $get['name'];
 
-		$filename = "../public/images/" > $name;
+		$filename = "../public/images/" . $name;
 
 		if (!file_exists($filename))
 			$filename = "../public/images/avatar.png";

@@ -23,17 +23,39 @@ class Absent extends BaseController
 
     public function index()
     {
-        return view("{$this->private}/absent/index");
+        $data['id'] = 0;
+        $data['kelas'] = "Semua Kelas";
+        return view("{$this->private}/absent/index", $data);
+    }
+
+    public function kelas($id = null)
+    {
+        $data['id'] = $id;
+        $data['kelas'] = 'Kelas ' . $this->search_kelas($id, session('kelas'))['kelas'];
+        return view("{$this->private}/absent/index", $data);
+    }
+
+    function search_kelas($id, $array)
+    {
+        foreach ($array as $key => $val) {
+            if ($val['id_kelas'] === $id) {
+                return $val;
+            }
+        }
+        return null;
     }
 
     public function ajax_absent()
     {
-        // if (! $this->request->isAJAX()) { die('denied!'); }
+        if (!$this->request->isAJAX()) {
+            die('denied!');
+        }
 
         $draw       = $this->request->getPost('draw');
         $length     = $this->request->getPost('length');
         $start      = $this->request->getPost('start');
         $search     = $this->request->getPost('search')['value'];
+        $id_kelas   = $this->request->getPost('id');
 
         $output     = [
             'draw'              => $draw,
@@ -43,6 +65,9 @@ class Absent extends BaseController
         ];
 
         $data   = $this->m_absent->join('siswa', 'nis');
+        if (!$id_kelas == 0) {
+            $data->where('id_kelas', $id_kelas);
+        }
         if ($search != '') {
             $data->like('nis', $search);
         }
@@ -57,8 +82,11 @@ class Absent extends BaseController
 
         $nomor_urut = $start + 1;
         foreach ($query as $v) {
-            $button = '<a href="javascript:;" class="btn btn-primary" style="margin:5px" onclick="call_modal(\'edit\',  \'' . $v['nis'] . '\', \'' . $v['nis'] . '\', \'' . $v['nis'] . '\', \'' . $v['nis'] . '\')"><i class="fa fa-edit"></i></a>&nbsp;';
-            $button .= '<a href="#" class="btn btn-danger" style="margin:5px" onclick="call_modal(\'delete\',  \'' . $v['nis'] . '\')"><i class="fa fa-times"></i></a></a>';
+            unset($v['password']);
+            $param = base64_encode(json_encode($v));
+            $button = '<a href="javascript:;" class="btn btn-info" style="margin:2px 0px; width:50px" onclick="call_modal(\'detail\',  \'' . $param . '\')"><i class="fa fa-eye"></i></a>&nbsp;';
+            $button .= '<a href="javascript:;" class="btn btn-primary" style="margin:2px 0px; width:50px" onclick="call_modal(\'edit\',  \'' . $param . '\')"><i class="fa fa-edit"></i></a>&nbsp;';
+            $button .= '<a href="#" class="btn btn-danger" style="margin:2px 0px; width:50px" onclick="call_modal(\'delete\',  \'' . base64_encode(json_encode($v['id'])) . '\')"><i class="fa fa-times"></i></a></a>';
             // $button .= '<a href="'.admin_url('employee/delete_user/'.$v['id']).'" class="btn btn-danger"><i class="fa fa-times"></i></a></a>';
             $class = ($v['status'] == 'alfa') ? 'danger' : ($v['status'] == 'izin' ? 'secondary' : ($v['status'] == 'sakit' ? 'warning' : 'primary'));
             $status = '<span class="badge badge-pill badge-' . $class . '">' . ucfirst($v['status']) . '</span>';
@@ -109,10 +137,10 @@ class Absent extends BaseController
         echo json_encode($output);
     }
 
-    public function ajax_delete_user()
+    public function ajax_delete_absent()
     {
         $id     = $this->request->getPost('id');
-        $delete = $this->m_user->delete($id);
+        $delete = $this->m_absent->delete($id);
 
         if ($delete) {
             echo json_encode([csrf_token() => csrf_hash()]);
