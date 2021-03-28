@@ -25,7 +25,7 @@ class Home extends BaseController
 	public function img()
 	{
 		$get = $this->request->getGet();
-		$name = $get['name'];
+		$name = !isset($get['name']) ? 'avatar.png' : ($get['name'] == '' ? 'avatar.png' : $get['name']);
 
 		$filename = "../public/images/" . $name;
 

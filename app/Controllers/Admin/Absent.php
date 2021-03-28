@@ -64,14 +64,14 @@ class Absent extends BaseController
             'data'              => []
         ];
 
-        $data   = $this->m_absent->join('siswa', 'nis');
+        $data   = $this->m_absent->select('*, absensi.photo as pict')->join('siswa s', 'nis');
         if (!$id_kelas == 0) {
             $data->where('id_kelas', $id_kelas);
         }
         if ($search != '') {
             $data->like('nis', $search);
         }
-        $query  = $data->orderBy('id', 'DESC')->findAll($length, $start);
+        $query  = $data->join('kelas', 'id_kelas')->orderBy('id', 'DESC')->findAll($length, $start);
 
         if ($search != '') {
             $jum    = $this->m_absent->like('nis', $search)->countAllResults();
@@ -99,6 +99,45 @@ class Absent extends BaseController
                 $button,
             ];
             $nomor_urut++;
+        }
+
+        $output[csrf_token()]   = csrf_hash();
+        echo json_encode($output);
+    }
+
+    
+    public function ajax_save_absent()
+    {
+        if (!$this->request->isAJAX()) {
+            die('denied!');
+        }
+        $post   = $this->request->getJSON();
+
+        $id             = $post->id ?? null;
+        $nis            = $post->nis ?? null;
+        $longitude      = $post->longitude ?? null;
+        $latitude       = $post->latitude ?? null;
+        $alamat         = $post->alamat ?? null;
+        $status         = $post->status ?? null;
+        $notes          = $post->notes ?? null;
+        $photo          = $post->photo ?? null;
+        $tgl            = $post->date ?? date("Y-m-d H:i:s");
+
+        $data = [
+            'nis'       => $nis,
+            'status'    => $status,
+            'notes'     => $notes,
+        ];
+
+        if ($id) {
+            $data['id'] = $id;
+        }
+
+        $save = $this->m_absent->save($data);
+
+        $output = [];
+        if (!$save) {
+            $output['errors']   = $this->m_absent->errors();
         }
 
         $output[csrf_token()]   = csrf_hash();

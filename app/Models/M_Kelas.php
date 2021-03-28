@@ -11,12 +11,12 @@ class M_Kelas extends Model
 
     // protected $useSoftDeletes   = true;
 
-    protected $allowedFields    = ['id_kelas', 'nama'];
+    protected $allowedFields    = ['kelas'];
 
     // protected $useTimestamps    = true;
 
     protected $validationRules  = [
-        'id_kelas'           => 'required',
+        // 'id_kelas'           => 'required',
     ];
 
     // protected $createdField = 'created_at';

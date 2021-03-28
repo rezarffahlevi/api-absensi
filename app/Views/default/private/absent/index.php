@@ -45,25 +45,29 @@
     });
 
     $('#btn-submit').click(async function() {
-        let name = $('#name').val();
-        let email = $('#email').val();
-        let address = $('#address').val();
+        let id_absent = $('#id_absent').val();
+        let nis = $('#nis').val();
+        let status = $('#status').val();
+        let keterangan = $('#keterangan').val();
 
         let data = {
-            name,
-            email,
-            address
+            id: id_absent,
+            nis,
+            status,
+            notes: keterangan
         };
+
         data[token] = hash;
 
         if (id) {
-            data.id = id;
+            data.id = id_absent;
         }
 
         $.ajax({
-            url: '<?= admin_url('absent/ajax_submit_user') ?>',
+            url: '<?= admin_url('absent/ajax_save_absent') ?>',
             type: 'post',
-            data,
+            contentType: 'application/json',
+            data: JSON.stringify(data),
             success: function(json) {
                 json = JSON.parse(json);
                 hash = json[token];
@@ -112,6 +116,7 @@
             $('#absentModal').modal('show');
         } else if (type == 'edit') {
             id = row.nis;
+            $('#id_absent').val(row.id);
             $('#nis').val(row.nis);
             $('#nama').val(row.nama);
             $('#status').val(row.status);
@@ -122,10 +127,16 @@
             id = row;
             $('#deleteAbsentModal').modal('show');
         } else {
-            $('#nis').val(row.nis);
-            $('#nama').val(row.nama);
-            $('#status').val(row.status);
-            $('#keterangan').val(row.notes);
+            $('#pict').removeAttr('src');
+            $('#dtl_nis').val(row.nis);
+            $('#dtl_nama').val(row.nama);
+            $('#dtl_tgl').val(row.tgl);
+            $('#dtl_kelas').val(row.kelas);
+            $('#dtl_status').val(row.status);
+            $('#dtl_keterangan').val(row.notes);
+            $('#dtl_longlat').val(row.longitude + ', ' + row.latitude);
+            $('#dtl_alamat').val(row.alamat);
+            $('#pict').attr('src', "<?= base_url('home/img?name=') ?>" + row.pict).css('max-height', '300px');
 
             $('#absentDetailModal').modal('show');
         }
@@ -194,18 +205,23 @@
                 <form method="POST" id="form-absent">
                     <div class="form-group">
                         <label for="nis">NIS:</label>
-                        <input type="nis" name="nis" id="nis" class="form-control" readonly>
+                        <input type="text" name="nis" id="nis" class="form-control" readonly>
+                        <input type="hidden" name="id_absent" id="id_absent" class="form-control" readonly>
                         <span class="text-danger text-validation" id="validation_name"></span>
                     </div>
                     <div class="form-group">
                         <label for="nama">Nama:</label>
-                        <input type="nama" name="nama" id="nama" class="form-control" readonly>
+                        <input type="text" name="nama" id="nama" class="form-control" readonly>
                         <span class="text-danger text-validation" id="validation_nama"></span>
                     </div>
 
                     <div class="form-group">
                         <label for="status">Status:</label>
-                        <input type="text" name="status" id="status" class="form-control">
+                        <select name="status" id="status" class="form-control">
+                            <option value="hadir">Hadir</option>
+                            <option value="izin">Izin</option>
+                            <option value="sakit">Sakit</option>
+                        </select>
                         <span class="text-danger text-validation" id="validation_status"></span>
                     </div>
 
@@ -235,7 +251,7 @@
             </div>
             <div class="modal-body">
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-md-6 col-sm-12">
                         <div class="form-group">
                             <label for="dtl_nis">NIS:</label>
                             <input type="dtl_nis" name="dtl_nis" id="dtl_nis" class="form-control">
@@ -253,12 +269,12 @@
                         </div>
                         <div class="form-group">
                             <label for="dtl_nama">Kelas:</label>
-                            <input type="dtl_nama" name="dtl_nama" id="dtl_nama" class="form-control">
+                            <input type="dtl_nama" name="dtl_nama" id="dtl_kelas" class="form-control">
                             <span class="text-danger text-validation" id="validation_dtl_nama"></span>
                         </div>
                     </div>
 
-                    <div class="col-6">
+                    <div class="col-md-6 col-sm-12">
                         <div class="form-group">
                             <label for="status">Status:</label>
                             <input type="text" name="status" id="dtl_status" class="form-control">
@@ -276,8 +292,13 @@
                         </div>
                         <div class="form-group">
                             <label for="keterangan">Alamat:</label>
-                            <textarea name="keterangan" id="dtl_keterangan" class="form-control"></textarea>
+                            <textarea name="keterangan" id="dtl_alamat" class="form-control"></textarea>
                         </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6 text-center">
+                        <img id='pict'/>
                     </div>
                 </div>
             </div>

@@ -82,19 +82,21 @@ class Absent extends BaseController
             }
 
             if ($isAbsent > 0) {
-                if ($isAbsent == 1 && date('H') < 11) {
+                // if ($isAbsent == 1 && date('H') < 11) {
+                //     $output['code']     = $this->constant->error;
+                //     $output['message']  = 'Anda sudah absen hari ini';
+                //     $next = false;
+                // }
+                // else if ($isAbsent == 1 && date('H') >= 12 && date('H') <= 14) {
+                //     $next = true;
+                // } else if ($isAbsent == 2 && date('H') > 14 && date('H') < 21) {
+                //     $next = true;
+                // } 
+                // else {
                     $output['code']     = $this->constant->error;
                     $output['message']  = 'Anda sudah absen hari ini';
                     $next = false;
-                } else if ($isAbsent == 1 && date('H') >= 12 && date('H') <= 14) {
-                    $next = true;
-                } else if ($isAbsent == 2 && date('H') > 14 && date('H') < 21) {
-                    $next = true;
-                } else {
-                    $output['code']     = $this->constant->error;
-                    $output['message']  = 'Anda sudah absen hari ini';
-                    $next = false;
-                }
+                // }
             }
 
 

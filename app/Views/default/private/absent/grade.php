@@ -9,7 +9,7 @@
 <div class="content-header">
     <div class="card bg-transparent shadow-none">
         <div class="card-header d-flex p-0">
-            <h3 class="p-3 m-0">Daftar User</h3>
+            <h3 class="p-3 m-0">Daftar Kelas</h3>
         </div>
     </div>
     <a href="javascript:;" class="btn btn-primary" style="margin:2px 7px;" onclick="call_modal('add')">Tambah Kelas</i></a>

@@ -11,9 +11,13 @@ if ($uri->getTotalSegments() > 0) {
 
 $kelas = session()->get('kelas');
 $menu_kelas = [];
+$menu_kelas_siswa = [];
 foreach ($kelas as $key => $value) {
     $menu_kelas[$key]['title'] = "Kelas " . $value['kelas'];
     $menu_kelas[$key]['link'] = 'absent/kelas/' . $value['id_kelas'];
+
+    $menu_kelas_siswa[$key]['title'] = "Kelas " . $value['kelas'];
+    $menu_kelas_siswa[$key]['link'] = 'student/kelas/' . $value['id_kelas'];
 }
 $menu   = [
     [
@@ -30,21 +34,22 @@ $menu   = [
     ],
     [
         'title'     => 'Master Data',
-        'link'      => 'components',
+        'link'      => 'admin',
         'icon'      => 'fa-chart-pie',
         'submenu'   => [
 
             [
                 'title'     => 'Data Siswa',
-                'link'      => 'siswa',
+                'link'      => 'student',
+                'submenu'   => $menu_kelas_siswa
             ],
             [
                 'title'     => 'Data Kelas',
-                'link'      => 'siswa',
+                'link'      => 'grade',
             ],
             [
                 'title'     => 'Data User',
-                'link'      => 'siswa',
+                'link'      => 'user',
             ],
         ]
     ]
@@ -109,7 +114,6 @@ $menu   = [
                                     <?= $row['title']; ?>
 
                                     <?php if (!empty($row['submenu'])) : ?>
-
                                         <i class="right fas fa-angle-left"></i>
                                     <?php endif; ?>
                                 </p>
@@ -123,7 +127,23 @@ $menu   = [
                                             <a href="<?= admin_url($sub['link']); ?>" class="nav-link <?= $is_submenu_active == true ? 'active' : ''; ?>">
                                                 <i class="far fa-circle nav-icon"></i>
                                                 <p><?= $sub['title']; ?></p>
+                                                <?php if (!empty($sub['submenu'])) : ?>
+                                                    <i class="right fas fa-angle-left"></i>
+                                                <?php endif; ?>
                                             </a>
+                                            <?php if (!empty($sub['submenu'])) : ?>
+                                                <ul class="nav nav-treeview">
+                                                    <?php foreach ($sub['submenu'] as $j => $tree) : ?>
+                                                        <?php $is_submenu_active = preg_match('/' . str_replace('/', '\/', $tree['link']) . '/', $submenu_active); ?>
+                                                        <li class="nav-item" style="margin-left:10px;">
+                                                            <a href="<?= admin_url($tree['link']); ?>" class="nav-link <?= $is_submenu_active == true ? 'active' : ''; ?>">
+                                                                <i class="far fa-dot-circle nav-icon"></i>
+                                                                <p><?= $tree['title']; ?></p>
+                                                            </a>
+                                                        </li>
+                                                    <?php endforeach; ?>
+                                                </ul>
+                                            <?php endif; ?>
                                         </li>
                                     <?php endforeach; ?>
                                 </ul>
