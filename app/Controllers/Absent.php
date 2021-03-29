@@ -57,9 +57,9 @@ class Absent extends BaseController
                 unset($data['tgl']);
             }
 
-            $isAbsent = $this->m_absent->where('nis', $nis)->like('tgl', date('Y-m-d'))->countAllResults();
-
-            if ($data['status'] == 'hadir') {
+            $isAbsent = $this->m_absent->where('nis', $nis)->like('tgl', date_format(date_create($tgl), 'Y-m-d'))->countAllResults();
+            $isHadir = $data['status'] == 'hadir';
+            if ($isHadir) {
                 if (is_null($data['latitude']) || $data['latitude'] == "" || is_null($data['longitude']) || $data['longitude'] == "") {
                     $output['code']     = $this->constant->error;
                     $output['message']  = 'Gagal mendapatkan alamat';
@@ -93,9 +93,9 @@ class Absent extends BaseController
                 //     $next = true;
                 // } 
                 // else {
-                    $output['code']     = $this->constant->error;
-                    $output['message']  = 'Anda sudah absen hari ini';
-                    $next = false;
+                $output['code']     = $this->constant->error;
+                $output['message']  = 'Anda sudah absen';
+                $next = false;
                 // }
             }
 
@@ -107,12 +107,12 @@ class Absent extends BaseController
             if ($next) {
                 $save = $this->m_absent->save($data);
                 if ($save) {
-                    $is_late = $isAbsent < 1 && date('H') > 8;
+                    $is_late = $isAbsent < 1 && date_format(date_create($tgl), 'Y-m-d') == date('Y-m-d') && date('H') > 8;
                     $late = date_diff(date_create($tgl), date_create(date("Y-m-d") . ' 08:00:00'));
                     $msg_late  = "Absen berhasil, anda terlambat " . ($late->h < 1  ? "" : $late->h . " jam ") . $late->i . " menit " . $late->s . " detik";
-                    
+
                     $output['code'] = $this->constant->success;
-                    $output['message']  = $is_late ? $msg_late : 'Absen berhasil pada ' . $tgl;
+                    $output['message']  = $is_late ? $msg_late : ($isHadir ? 'Absen' : $data['status']) . ' berhasil pada ' . $tgl;
                     $output['data']     = $data;
                 } else {
                     $output['code'] = $this->constant->error_array;
