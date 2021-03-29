@@ -33,14 +33,13 @@ class Absent extends BaseController
             $nis     = $token->data->nis;
             $decoded = base64_decode($photo);
             $new_name = $nis . '_' . strtotime($tgl) . '.png';
-            file_put_contents('images/' . $new_name, $decoded);
 
             $data = [
                 'tgl'       => $tgl,
                 'nis'       => $nis,
                 'status'    => $status,
                 'notes'     => $notes,
-                'photo'     => $new_name,
+                'photo'     => $photo == null ? null : $new_name,
                 'latitude'  => $latitude,
                 'longitude' => $longitude,
                 'alamat'    => $alamat,
@@ -107,6 +106,9 @@ class Absent extends BaseController
             if ($next) {
                 $save = $this->m_absent->save($data);
                 if ($save) {
+                    if (!is_null($data['photo']))
+                        file_put_contents('images/' . $new_name, $decoded);
+
                     $is_late = $isAbsent < 1 && date_format(date_create($tgl), 'Y-m-d') == date('Y-m-d') && date('H') > 8;
                     $late = date_diff(date_create($tgl), date_create(date("Y-m-d") . ' 08:00:00'));
                     $msg_late  = "Absen berhasil, anda terlambat " . ($late->h < 1  ? "" : $late->h . " jam ") . $late->i . " menit " . $late->s . " detik";
