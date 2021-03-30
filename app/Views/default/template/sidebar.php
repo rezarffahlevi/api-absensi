@@ -3,10 +3,12 @@ $uri            = service('uri');
 $segments       = $uri->getSegments();
 $menu_active    = "";
 $submenu_active = "";
+$submenu_active_tree = "";
 
 if ($uri->getTotalSegments() > 0) {
     $menu_active    = $uri->getPath();
     $submenu_active = $uri->getPath();
+    $submenu_active_tree = $uri->getPath();
 }
 
 $kelas = session()->get('kelas');
@@ -34,7 +36,7 @@ $menu   = [
     ],
     [
         'title'     => 'Master Data',
-        'link'      => 'admin',
+        'link'      => 'student',
         'icon'      => 'fa-chart-pie',
         'submenu'   => [
 
@@ -134,9 +136,9 @@ $menu   = [
                                             <?php if (!empty($sub['submenu'])) : ?>
                                                 <ul class="nav nav-treeview">
                                                     <?php foreach ($sub['submenu'] as $j => $tree) : ?>
-                                                        <?php $is_submenu_active = preg_match('/' . str_replace('/', '\/', $tree['link']) . '/', $submenu_active); ?>
+                                                        <?php $is_submenu_active_tree = preg_match('/' . str_replace('/', '\/', $tree['link']) . '/', $submenu_active_tree); ?>
                                                         <li class="nav-item" style="margin-left:10px;">
-                                                            <a href="<?= admin_url($tree['link']); ?>" class="nav-link <?= $is_submenu_active == true ? 'active' : ''; ?>">
+                                                            <a href="<?= admin_url($tree['link']); ?>" class="nav-link <?= $is_submenu_active_tree == true ? 'active' : ''; ?>">
                                                                 <i class="far fa-dot-circle nav-icon"></i>
                                                                 <p><?= $tree['title']; ?></p>
                                                             </a>

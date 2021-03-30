@@ -9,12 +9,12 @@ class M_Siswa extends Model
 
     // protected $useSoftDeletes   = true;
 
-    protected $allowedFields    = ['nis', 'password', 'nama', 'id_kelas', 'photo'];
+    protected $allowedFields    = ['nis', 'nama', 'id_kelas', 'password', 'photo'];
 
     // protected $useTimestamps    = true;
 
     protected $validationRules  = [
-        'nis'           => 'required',
+        // 'nis'           => 'required',
     ];
 
     // protected $createdField = 'created_at';

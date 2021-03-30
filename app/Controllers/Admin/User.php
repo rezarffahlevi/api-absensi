@@ -2,20 +2,20 @@
 
 namespace App\Controllers\Admin;
 
-use App\Models\M_Kelas;
+use App\Models\M_User;
 use App\Controllers\BaseController;
 use CodeIgniter\API\ResponseTrait;
 
 class User extends BaseController
 {
-    protected $m_kelas;
+    protected $m_user;
     use ResponseTrait;
 
     function __construct()
     {
         setTitle('Kelas');
 
-        $this->m_kelas   = new M_Kelas();
+        $this->m_user   = new M_User();
     }
 
     public function index()
@@ -23,7 +23,7 @@ class User extends BaseController
         return view("{$this->private}/absent/user");
     }
 
-    public function ajax_grade()
+    public function ajax_user()
     {
         if (!$this->request->isAJAX()) {
             die('denied!');
@@ -41,27 +41,30 @@ class User extends BaseController
             'data'              => []
         ];
 
-        $data   = $this->m_kelas;
+        $data   = $this->m_user;
         if ($search != '') {
-            $data->like('kelas', $search);
+            $data->like('nama', $search);
         }
-        $query  = $data->orderBy('kelas', 'ASC')->findAll($length, $start);
+        $query  = $data->orderBy('nama', 'ASC')->findAll($length, $start);
 
         if ($search != '') {
-            $jum    = $this->m_kelas->like('kelas', $search)->countAllResults();
+            $jum    = $this->m_user->like('nama', $search)->countAllResults();
             $output['recordsTotal'] = $output['recordsFiltered']  = $jum;
         } else {
-            $output['recordsTotal'] = $output['recordsFiltered']  = $this->m_kelas->countAllResults();
+            $output['recordsTotal'] = $output['recordsFiltered']  = $this->m_user->countAllResults();
         }
 
         $nomor_urut = $start + 1;
         foreach ($query as $v) {
+            unset($v['password']);
             $param = base64_encode(json_encode($v));
             $button = '<a href="javascript:;" class="btn btn-primary" style="margin:2px 0px; width:50px" onclick="call_modal(\'edit\',  \'' . $param . '\')"><i class="fa fa-edit"></i></a>&nbsp;';
-            $button .= '<a href="#" class="btn btn-danger" style="margin:2px 0px; width:50px" onclick="call_modal(\'delete\',  \'' . base64_encode(json_encode($v['id_kelas'])) . '\')"><i class="fa fa-times"></i></a></a>';
+            $button .= '<a href="#" class="btn btn-danger" style="margin:2px 0px; width:50px" onclick="call_modal(\'delete\',  \'' . base64_encode(json_encode($v['id_user'])) . '\')"><i class="fa fa-times"></i></a></a>';
             $output['data'][]   = [
                 $nomor_urut,
-                $v['kelas'],
+                $v['nama'],
+                $v['username'],
+                $v['level'],
                 $button,
             ];
             $nomor_urut++;
@@ -71,46 +74,54 @@ class User extends BaseController
         echo json_encode($output);
     }
 
-    
-    public function ajax_save_grade()
+
+    public function ajax_save_user()
     {
         if (!$this->request->isAJAX()) {
             die('denied!');
         }
         $post   = $this->request->getJSON();
 
-        $id_kelas             = $post->id_kelas ?? null;
-        $kelas                = $post->kelas ?? null;
+        $id_user              = $post->id_user ?? null;
+        $nama                 = $post->nama ?? null;
+        $username             = $post->username ?? null;
+        $level                = $post->level ?? null;
+        $password             = $post->password ?? null;
 
         $data = [
-            'kelas'          => $kelas,
+            'nama'          => $nama,
+            'username'      => $username,
+            'level'         => $level,
         ];
 
-        if ($id_kelas != '' || $id_kelas != null) {
-            $data['id_kelas'] = $id_kelas;
+        if ($id_user != '' || $id_user != null) {
+            $data['id_user'] = $id_user;
+        }
+        if ($password != '' || $password != null) {
+            $password_hash = password_hash($password, PASSWORD_BCRYPT);
+            $data['password'] = $password_hash;
         }
 
-        $save = $this->m_kelas->save($data);
+        $save = $this->m_user->save($data);
 
         $output = [];
         if (!$save) {
-            $output['errors']   = $this->m_kelas->errors();
+            $output['errors']   = $this->m_user->errors();
         }
 
-        session()->set('kelas', $this->m_kelas->findAll());
-        
         $output[csrf_token()]   = csrf_hash();
         echo json_encode($output);
     }
 
-    public function ajax_delete_grade()
+    public function ajax_delete_user()
     {
+        if (!$this->request->isAJAX()) {
+            die('denied!');
+        }
         $id     = $this->request->getPost('id');
-        $delete = $this->m_kelas->delete($id);
+        $delete = $this->m_user->delete($id);
 
         if ($delete) {
-            session()->set('kelas', $this->m_kelas->findAll());
-            
             echo json_encode([csrf_token() => csrf_hash()]);
         }
     }

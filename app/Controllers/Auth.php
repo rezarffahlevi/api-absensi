@@ -62,7 +62,7 @@ class Auth extends BaseController
                 $notif  = ['type' => 'warning', 'msg' => 'Username atau password anda salah.'];
                 $user   = $this->m_user->where(['username' => $username])->first();
                 if (!empty($user)) {
-                    if ($user['password'] == $password) {
+                    if (!is_null($user) && password_verify($password, $user['password'])) {
                         $notif      = [];
                         $notif[]    = ['type' => 'success', 'msg' => 'Berhasil login.'];
                         $redirect   = redirect()->to(base_url('admin/home'));
@@ -109,9 +109,9 @@ class Auth extends BaseController
         if (!$this->auth->logged()) {
             return $redirect;
         }
-        
+
         $this->auth->logout();
-        
+
         return $redirect
             ->deleteCookie('user_id')
             ->deleteCookie('remember')
@@ -148,6 +148,7 @@ class Auth extends BaseController
 
             $token = JWT::encode($token, $secret_key);
             $isRegister = is_null($cek_login['nama']);
+            $isRegister = false;
             $output = [
                 'code' => $this->constant->success,
                 'message' => $isRegister ? 'new user register' : 'success login',
@@ -160,7 +161,8 @@ class Auth extends BaseController
             ];
 
             return $this->respond($output, 200);
-        } else if (is_null($cek_login)) {
+        } else if (false) {
+            // } else if (is_null($cek_login)) {
             $password_hash = password_hash($password, PASSWORD_BCRYPT);
             $data = [
                 'nis' => $nis,
@@ -199,7 +201,7 @@ class Auth extends BaseController
         } else {
             $output = [
                 'code' => $this->constant->error,
-                'message' => 'Wrong username / password',
+                'message' => 'Invalid username / password',
                 'data' => null
             ];
             return $this->respond($output, 200);

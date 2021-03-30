@@ -12,7 +12,7 @@
             <h3 class="p-3 m-0">Daftar User</h3>
         </div>
     </div>
-    <a href="javascript:;" class="btn btn-primary" style="margin:2px 7px;" onclick="call_modal('add')">Tambah Kelas</i></a>
+    <a href="javascript:;" class="btn btn-primary" style="margin:2px 7px;" onclick="call_modal('add')">Tambah User</i></a>
 </div>
 <?= $this->endSection('content_header') ?>
 
@@ -31,7 +31,7 @@
             processing: true,
             serverSide: true,
             ajax: {
-                url: "<?= admin_url('grade/ajax_grade') ?>",
+                url: "<?= admin_url('user/ajax_user') ?>",
                 type: 'POST',
                 data: function(d) {
                     d[token] = hash;
@@ -43,23 +43,26 @@
         });
     });
 
-    $('#btn-submit').click(async function() {
-        let id_kelas = $('#id_kelas').val();
-        let kelas = $('#kelas').val();
+    $('#form-user').submit(async function(e) {
+        e.preventDefault();
+        let id_user = $('#id_user').val();
+        let nama = $('#nama').val();
+        let username = $('#username').val();
+        let level = $('#level').val();
+        let password = $('#password').val();
 
         let data = {
-            id_kelas,
-            kelas
+            id_user,
+            nama,
+            username,
+            level,
+            password
         };
 
         data[token] = hash;
 
-        if (id) {
-            data.id = id_absent;
-        }
-
         $.ajax({
-            url: '<?= admin_url('grade/ajax_save_grade') ?>',
+            url: '<?= admin_url('user/ajax_save_user') ?>',
             type: 'post',
             contentType: 'application/json',
             data: JSON.stringify(data),
@@ -73,8 +76,7 @@
                     }
                 } else {
                     dt.ajax.reload();
-                    window.location.reload()
-                    $('#gradeModal').modal('hide');
+                    $('#userModal').modal('hide');
                 }
             }
         });
@@ -87,7 +89,7 @@
         data[token] = hash;
 
         $.ajax({
-            url: '<?= admin_url('grade/ajax_delete_grade') ?>',
+            url: '<?= admin_url('user/ajax_delete_user') ?>',
             type: 'post',
             data,
             success: function(json) {
@@ -95,14 +97,13 @@
                 hash = json[token];
 
                 dt.ajax.reload();
-                $('#deleteGradeModal').modal('hide');
-                window.location.reload();
+                $('#deleteuserModal').modal('hide');
             }
         });
     });
 
     function call_modal(type, param = null) {
-        $("#form-absent")[0].reset();
+        $("#form-user")[0].reset();
         $('#id').val('');
         $('.text-validation').text('');
 
@@ -110,16 +111,18 @@
         console.log(row)
         if (type == 'add') {
             id = '';
-            $('#gradeModal').modal('show');
+            $('#userModal').modal('show');
         } else if (type == 'edit') {
             id = row.nis;
-            $('#id_kelas').val(row.id_kelas);
-            $('#kelas').val(row.kelas);
+            $('#id_user').val(row.id_user);
+            $('#nama').val(row.nama);
+            $('#username').val(row.username);
+            $('#level').val(row.level);
 
-            $('#gradeModal').modal('show');
+            $('#userModal').modal('show');
         } else if (type == 'delete') {
             id = row;
-            $('#deleteGradeModal').modal('show');
+            $('#deleteuserModal').modal('show');
         }
     }
 </script>
@@ -132,7 +135,7 @@
             <div class="card-header p-0 border-bottom-0">
                 <ul class="nav nav-tabs" id="custom-tabs-four-tab" role="tablist">
                     <li class="nav-item">
-                        <a class="nav-link active" id="custom-tabs-four-home-tab" data-toggle="pill" href="#custom-tabs-four-home" role="tab" aria-controls="custom-tabs-four-home" aria-selected="true">Kelas</a>
+                        <a class="nav-link active" id="custom-tabs-four-home-tab" data-toggle="pill" href="#custom-tabs-four-home" role="tab" aria-controls="custom-tabs-four-home" aria-selected="true">Daftar User</a>
                     </li>
                     <!-- <li class="nav-item">
                         <a class="nav-link" id="custom-tabs-four-profile-tab" data-toggle="pill" href="#custom-tabs-four-profile" role="tab" aria-controls="custom-tabs-four-profile" aria-selected="false">Informasi</a>
@@ -150,7 +153,9 @@
                                         <thead>
                                             <tr>
                                                 <th width="20">No</th>
-                                                <th>Kelas</th>
+                                                <th>Nama</th>
+                                                <th>Username</th>
+                                                <th>Level</th>
                                                 <th width="200">Aksi</th>
                                             </tr>
                                         </thead>
@@ -169,42 +174,60 @@
     </div>
 </div>
 
-<div class="modal fade" id="gradeModal" tabindex="-1" role="dialog" aria-labelledby="gradeModalLabel" aria-hidden="true">
+<div class="modal fade" id="userModal" tabindex="-1" role="dialog" aria-labelledby="userModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="gradeModalLabel">Form Kelas</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <form method="POST" id="form-absent">
+            <form method="POST" id="form-user">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="userModalLabel">Form User</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
                     <div class="form-group">
-                        <!-- <label for="id_kelas">ID Kelas:</label> -->
-                        <input type="hidden" name="id_kelas" id="id_kelas" class="form-control" readonly>
-                        <span class="text-danger text-validation" id="validation_id_kelas"></span>
+                        <input type="hidden" name="id_user" id="id_user" class="form-control" readonly>
+                        <span class="text-danger text-validation" id="validation_id_user"></span>
                     </div>
                     <div class="form-group">
-                        <label for="kelas">Kelas:</label>
-                        <input type="text" name="kelas" id="kelas" class="form-control">
-                        <span class="text-danger text-validation" id="validation_kelas"></span>
+                        <label for="nama">Nama:</label>
+                        <input type="text" name="nama" id="nama" class="form-control" required>
+                        <span class="text-danger text-validation" id="validation_nama"></span>
                     </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" id="btn-submit">Submit</button>
-            </div>
+                    <div class="form-group">
+                        <label for="username">Username:</label>
+                        <input type="text" name="username" id="username" class="form-control">
+                        <span class="text-danger text-validation" id="validation_username"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="level">Level:</label>
+                        <select name="level" id="level" class="form-control" required>
+                            <option value="">Pilih</option>
+                            <option value="admin">Admin</option>
+                            <option value="guru">Guru</option>
+                        </select>
+                        <span class="text-danger text-validation" id="validation_username"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" name="password" id="password" class="form-control">
+                        <span class="text-danger text-validation" id="validation_password"></span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary" id="btn-submit">Submit</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>
 
-<div class="modal fade" id="deleteGradeModal" tabindex="-1" role="dialog" aria-labelledby="deleteGradeModalLabel" aria-hidden="true">
+<div class="modal fade" id="deleteuserModal" tabindex="-1" role="dialog" aria-labelledby="deleteuserModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="deleteGradeModalLabel">Delete Absent</h5>
+                <h5 class="modal-title" id="deleteuserModalLabel">Delete Absent</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
