@@ -13,6 +13,8 @@
         </div>
     </div>
     <a href="javascript:;" class="btn btn-primary" style="margin:2px 7px;" onclick="call_modal('add')">Tambah Siswa</i></a>
+    <a href="javascript:;" class="btn btn-success" style="margin:2px 7px;" onclick="call_modal('import')">Import Siswa</i></a>
+    <a href="javascript:;" class="btn btn-danger" style="margin:2px 7px;" onclick="call_modal('delete_all')">Delete Semua Siswa <?= $kelas ?></i></a>
 </div>
 <?= $this->endSection('content_header') ?>
 
@@ -57,7 +59,7 @@
             nama,
             id_kelas: kelas,
             password,
-            type:typeAction
+            type: typeAction
         };
 
         data[token] = hash;
@@ -91,6 +93,9 @@
         let data = {
             id
         };
+        if (data.id == 0) {
+            data['id_kelas'] = '<?= $id ?>';
+        }
         data[token] = hash;
 
         $.ajax({
@@ -132,6 +137,12 @@
         } else if (type == 'delete') {
             id = row;
             $('#deletestudentModal').modal('show');
+        } else if (type == 'delete_all') {
+            id = 0;
+            $('#deletestudentModal').modal('show');
+        } else if (type == 'import') {
+            id = row;
+            $('#importModal').modal('show');
         }
 
     }
@@ -188,7 +199,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="studentModalLabel">Form Absen</h5>
+                <h5 class="modal-title" id="studentModalLabel">Form Siswa</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -250,6 +261,41 @@
                 <button type="button" class="btn btn-danger" id="btn-delete">Delete</button>
             </div>
         </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="importModal" tabindex="-1" role="dialog" aria-labelledby="deleteAbsentModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <form method="post" action="<?= admin_url('student/import') ?>" enctype="multipart/form-data">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exportAbsentModalLabel">Export Absent</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="password">Template:</label>
+                        <div>
+                            <a href="<?=base_url('Template Import Siswa.xlsx')?>" class="btn btn-success">Download Template</i></a>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Import Data:</label>
+                        <div>
+                            <input type="hidden" name="id_kelas" value="<?= $id ?>" />
+                            <input type="file" name="file_siswa" class="btn btn-success" id="import_excel" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" />
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary" id="btn-import">Import</button>
+                </div>
+            </div>
+        </form>
     </div>
 </div>
 <?= $this->endSection('content') ?>

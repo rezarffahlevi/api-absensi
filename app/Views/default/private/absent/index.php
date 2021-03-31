@@ -2,6 +2,9 @@
 
 <?= $this->section('stylesheet') ?>
 <link rel="stylesheet" href="<?= asset_url('plugins/datatables-bs4/css/dataTables.bootstrap4.min.css'); ?>">
+<!-- Select2 -->
+<link rel="stylesheet" href="<?= asset_url('plugins/select2/css/select2.min.css') ?>">
+<link rel="stylesheet" href="<?= asset_url('plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') ?>">
 <?= $this->endSection('stylesheet') ?>
 
 <!-- content_header -->
@@ -12,19 +15,25 @@
             <h3 class="p-3 m-0">Daftar Absensi <?= $kelas ?></h3>
         </div>
     </div>
+    <a href="javascript:;" class="btn btn-primary" style="margin:2px 7px;" onclick="call_modal('add')">Tambah Absen</i></a>
+    <a href="javascript:;" class="btn btn-success" style="margin:2px 7px;" onclick="call_modal('export')">Export Absen</i></a>
 </div>
 <?= $this->endSection('content_header') ?>
 
 <?= $this->section('javascript') ?>
+<!-- Select2 -->
+<script src="<?= asset_url('plugins/select2/js/select2.full.min.js') ?>"></script>
 <script src="<?= asset_url('plugins/datatables/jquery.dataTables.min.js'); ?>"></script>
 <script src="<?= asset_url('plugins/datatables-bs4/js/dataTables.bootstrap4.min.js'); ?>"></script>
 <script>
     let dt = id = '';
+    let id_kelas = <?= $id ?>;
     let token = '<?= csrf_token() ?>';
     let hash = '<?= csrf_hash() ?>';
+    let student = <?= json_encode($student); ?>;
+    let selected_date = new Date().toISOString().substr(0, 10);
 
     $(document).ready(function() {
-        let id_kelas = <?= $id ?>;
         dt = $('#table-absent').DataTable({
             stateSave: true,
             ordering: false,
@@ -36,23 +45,45 @@
                 data: function(d) {
                     d[token] = hash;
                     d['id'] = id_kelas;
+                    d['selected_date'] = selected_date;
                 },
             },
             drawCallback: function(settings) {
                 hash = settings.json[token];
             }
         });
+
+        $('#select2-nis').select2({
+            theme: 'bootstrap4'
+        });
+        $('#selected_date').val(selected_date);
+    });
+
+    $('#select2-nis').on('change', function(e) {
+        let value = e.currentTarget.value;
+        let nama = student.find(fd => fd.nis == value).nama;
+        $('#nama').val(nama);
+        console.log(e.currentTarget.value, student)
+    });
+
+    $('#selected_date').on('change', function(e) {
+        let value = e.currentTarget.value;
+        selected_date = value;
+        dt.ajax.reload();
+        console.log(e.currentTarget.value)
     });
 
     $('#btn-submit').click(async function() {
         let id_absent = $('#id_absent').val();
-        let nis = $('#nis').val();
+        let nis = $('#select2-nis').val();
         let status = $('#status').val();
+        let tgl = $('#tgl').val();
         let keterangan = $('#keterangan').val();
 
         let data = {
             id: id_absent,
             nis,
+            date: new Date(tgl).toISOString().slice(0, 19).replace('T', ' '),
             status,
             notes: keterangan
         };
@@ -109,16 +140,24 @@
         $('#id').val('');
         $('.text-validation').text('');
 
-        let row = JSON.parse(atob(param));
+        let row = param && JSON.parse(atob(param));
         console.log(row)
         if (type == 'add') {
             id = '';
+            $('#tgl').val((new Date().toLocaleString("sv-SE") + '').replace(' ', 'T'));
+            $('#select2-nis').prop('disabled', false);
+            $('#nama').prop('readonly', true);
             $('#absentModal').modal('show');
+            $('#id_absent').val('');
         } else if (type == 'edit') {
             id = row.nis;
+            $('#select2-nis').prop('disabled', true);
+            $('#nama').prop('readonly', true);
+
             $('#id_absent').val(row.id);
-            $('#nis').val(row.nis);
+            $('#select2-nis').val(row.nis);
             $('#nama').val(row.nama);
+            $('#tgl').val((new Date(row.tgl).toLocaleString("sv-SE") + '').replace(' ', 'T'));
             $('#status').val(row.status);
             $('#keterangan').val(row.notes);
 
@@ -126,6 +165,11 @@
         } else if (type == 'delete') {
             id = row;
             $('#deleteAbsentModal').modal('show');
+        } else if (type == 'export') {
+            id = '';
+            $('#month').val(new Date().getMonth() + 1);
+            $('#year').val(new Date().getFullYear());
+            $('#exportAbsentModal').modal('show');
         } else {
             $('#pict').removeAttr('src');
             $('#dtl_nis').val(row.nis);
@@ -140,8 +184,25 @@
 
             $('#absentDetailModal').modal('show');
         }
-
     }
+
+    $('#btn-export').click(async function() {
+        let month = $('#month').val();
+        let year = $('#year').val();
+
+
+        let data = {
+            date: year + '-' + month + '-10',
+            id_kelas: id_kelas,
+            kelas: '<?= $kelas ?>',
+        };
+
+        data[token] = hash;
+
+        console.log(data);
+        await window.open("<?= admin_url('absent/export') ?>" + '?' + $.param(data));
+        $('#exportAbsentModal').modal('hide');
+    });
 </script>
 <?= $this->endSection('javascript') ?>
 
@@ -154,12 +215,21 @@
                     <li class="nav-item">
                         <a class="nav-link active" id="custom-tabs-four-home-tab" data-toggle="pill" href="#custom-tabs-four-home" role="tab" aria-controls="custom-tabs-four-home" aria-selected="true">Daftar Kehadiran</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link" id="custom-tabs-four-profile-tab" data-toggle="pill" href="#custom-tabs-four-profile" role="tab" aria-controls="custom-tabs-four-profile" aria-selected="false">Informasi</a>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
             <div class="card-body">
+                <div class="row">
+                    <div class="col-2">
+                        <div class="form-group">
+                            <label for="nama">Tanggal:</label>
+                            <input type="date" name="selected_date" id="selected_date" class="form-control">
+                            <span class="text-danger text-validation" id="validation_tgl"></span>
+                        </div>
+                    </div>
+                </div>
                 <div class="tab-content" id="custom-tabs-four-tabContent">
                     <div class="tab-pane fade show active" id="custom-tabs-four-home" role="tabpanel" aria-labelledby="custom-tabs-four-home-tab">
                         <div class="box box-primary">
@@ -205,14 +275,26 @@
                 <form method="POST" id="form-absent">
                     <div class="form-group">
                         <label for="nis">NIS:</label>
-                        <input type="text" name="nis" id="nis" class="form-control" readonly>
+                        <select class="js-data-example-ajax form-control" id="select2-nis" required>
+                            <option value="">Pilih</option>
+                            <?php foreach ($student as $std) : ?>
+                                <option><?= $std['nis'] ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                        <input type="hidden" name="nis" id="nis" class="form-control">
                         <input type="hidden" name="id_absent" id="id_absent" class="form-control" readonly>
                         <span class="text-danger text-validation" id="validation_name"></span>
                     </div>
                     <div class="form-group">
                         <label for="nama">Nama:</label>
-                        <input type="text" name="nama" id="nama" class="form-control" readonly>
+                        <input type="text" name="nama" id="nama" class="form-control">
                         <span class="text-danger text-validation" id="validation_nama"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nama">Waktu:</label>
+                        <input type="datetime-local" name="tgl" id="tgl" class="form-control" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}">
+                        <span class="text-danger text-validation" id="validation_tgl"></span>
                     </div>
 
                     <div class="form-group">
@@ -298,7 +380,7 @@
                 </div>
                 <div class="row">
                     <div class="col-6 text-center">
-                        <img id='pict'/>
+                        <img id='pict' />
                     </div>
                 </div>
             </div>
@@ -324,6 +406,42 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 <button type="button" class="btn btn-danger" id="btn-delete">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="exportAbsentModal" tabindex="-1" role="dialog" aria-labelledby="deleteAbsentModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exportAbsentModalLabel">Export Absent</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="month">Bulan:</label>
+                    <div class="row">
+                        <div class="col-7">
+                            <select name="month" id="month" class="form-control">
+                                <?php
+                                for ($i = 1; $i <= 12; $i++) {
+                                    echo "<option value='" . $i . "'>" . date('F', mktime(11, 11, 10, $i, 12, date('Y'))) . "</option>";
+                                } ?>
+                            </select>
+                        </div>
+                        <div class="col-5">
+                            <input type="text" name="year" id="year" class="form-control">
+                        </div>
+                        <span class="text-danger text-validation" id="validation_month"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="btn-export">Export</button>
             </div>
         </div>
     </div>

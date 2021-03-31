@@ -71,10 +71,10 @@ class Student extends BaseController
         $query  = $data->orderBy('nama', 'ASC')->findAll($length, $start);
 
         if ($search != '') {
-            $jum    = $this->m_student->like('nis', $search)->countAllResults();
+            $jum    = $this->m_student->where('id_kelas', $id_kelas)->like('nis', $search)->countAllResults();
             $output['recordsTotal'] = $output['recordsFiltered']  = $jum;
         } else {
-            $output['recordsTotal'] = $output['recordsFiltered']  = $this->m_student->countAllResults();
+            $output['recordsTotal'] = $output['recordsFiltered']  = $this->m_student->where('id_kelas', $id_kelas)->countAllResults();
         }
 
         $nomor_urut = $start + 1;
@@ -143,11 +143,67 @@ class Student extends BaseController
 
     public function ajax_delete_student()
     {
-        $id     = $this->request->getPost('id');
-        $delete = $this->m_student->delete($id);
+        $id           = $this->request->getPost('id');
+        $id_kelas     = $this->request->getPost('id_kelas') ?? null;
+
+        if ($id == 0) {
+            $delete = $this->m_student->where('id_kelas', $id_kelas)->delete();
+        } else
+            $delete = $this->m_student->delete($id);
 
         if ($delete) {
             echo json_encode([csrf_token() => csrf_hash()]);
         }
+    }
+
+    public function import()
+    {
+        $file = $this->request->getFile('file_siswa');
+        $id_kelas = $this->request->getPost('id_kelas');
+
+        $data = array(
+            'file_siswa'           => $file,
+        );
+
+        // ambil extension dari file excel
+        $extension = $file->getClientExtension();
+
+        // format excel 2007 ke bawah
+        if ('xls' == $extension) {
+            $reader = new \PhpOffice\PhpSpreadsheet\Reader\Xls();
+            // format excel 2010 ke atas
+        } else {
+            $reader = new \PhpOffice\PhpSpreadsheet\Reader\Xlsx();
+        }
+
+        $spreadsheet = $reader->load($file);
+        $data = $spreadsheet->getActiveSheet()->toArray();
+
+        $data_siswa = [];
+        foreach ($data as $col => $row) {
+
+            // lewati baris ke 0 pada file excel
+            // dalam kasus ini, array ke 0 adalahpara title
+            if ($col == 0) {
+                continue;
+            }
+
+            $data_siswa[] = [
+                'nis' => $row[0],
+                'nama' => $row[1],
+                'id_kelas' => $id_kelas,
+                'password' => password_hash($row[0] == '' ? $row[0] : $row[3], PASSWORD_BCRYPT),
+            ];
+        }
+
+        // print_r($data_siswa);
+
+        $notif[]          = ['type' => 'success', 'msg' => 'Import data siswa berhasil'];
+
+        $save = $this->m_student->insertBatch($data_siswa);
+        if ($save < 0) {
+            $notif[0]['msg']   = $this->m_student->errors();
+        }
+        return redirect()->back()->withInput()->with('notif', $notif);
     }
 }
