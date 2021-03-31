@@ -63,6 +63,7 @@ class Absent extends BaseController
         $search     = $this->request->getPost('search')['value'];
         $id_kelas   = $this->request->getPost('id');
         $selected_date   = $this->request->getPost('selected_date');
+        $selected_status   = $this->request->getPost('selected_status');
 
         $output     = [
             'draw'              => $draw,
@@ -78,6 +79,9 @@ class Absent extends BaseController
         if ($search != '') {
             $data->like('nis', $search);
         }
+        if ($selected_status != 'semua')
+            $data->where('status', $selected_status);
+
         $query  = $data->join('kelas', 'id_kelas')->like('tgl', $selected_date)->orderBy('id', 'DESC')->findAll($length, $start);
 
         if ($search != '') {

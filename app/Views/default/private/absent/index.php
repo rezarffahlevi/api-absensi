@@ -32,6 +32,7 @@
     let hash = '<?= csrf_hash() ?>';
     let student = <?= json_encode($student); ?>;
     let selected_date = new Date().toISOString().substr(0, 10);
+    let selected_status = 'semua';
 
     $(document).ready(function() {
         dt = $('#table-absent').DataTable({
@@ -46,6 +47,7 @@
                     d[token] = hash;
                     d['id'] = id_kelas;
                     d['selected_date'] = selected_date;
+                    d['selected_status'] = selected_status;
                 },
             },
             drawCallback: function(settings) {
@@ -69,6 +71,13 @@
     $('#selected_date').on('change', function(e) {
         let value = e.currentTarget.value;
         selected_date = value;
+        dt.ajax.reload();
+        console.log(e.currentTarget.value)
+    });
+
+    $('#selected_status').on('change', function(e) {
+        let value = e.currentTarget.value;
+        selected_status = value;
         dt.ajax.reload();
         console.log(e.currentTarget.value)
     });
@@ -226,6 +235,19 @@
                         <div class="form-group">
                             <label for="nama">Tanggal:</label>
                             <input type="date" name="selected_date" id="selected_date" class="form-control">
+                            <span class="text-danger text-validation" id="validation_tgl"></span>
+                        </div>
+                    </div>
+
+                    <div class="col-2">
+                        <div class="form-group">
+                            <label for="selected_status">Status:</label>
+                            <select name="selected_status" id="selected_status" class="form-control">
+                                <option value="semua">Semua</option>
+                                <option value="hadir">Hadir</option>
+                                <option value="izin">Izin</option>
+                                <option value="sakit">Sakit</option>
+                            </select>
                             <span class="text-danger text-validation" id="validation_tgl"></span>
                         </div>
                     </div>

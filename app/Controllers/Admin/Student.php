@@ -192,7 +192,7 @@ class Student extends BaseController
                 'nis' => $row[0],
                 'nama' => $row[1],
                 'id_kelas' => $id_kelas,
-                'password' => password_hash($row[0] == '' ? $row[0] : $row[3], PASSWORD_BCRYPT),
+                'password' => password_hash($row[0] == '' ? $row[0] : $row[2], PASSWORD_BCRYPT),
             ];
         }
 
